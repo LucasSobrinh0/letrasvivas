@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poetsen One", sans-serif;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Para alinhar verticalmente ao centro */
+    padding: 20px;
+    background-color: white;
+}
+
+nav .logo {
+    text-decoration: none;
+    font-weight: bold;
+    /* Deixe o texto do logo em negrito */
+    color: black;
+    font-size: 2rem;
+}
+
+nav>div>a {
+    color: black;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+nav>div>a:hover {
+    border-bottom: 2px solid black;
+}
+
+.main-index {
+    display: flex;
+    justify-content: center;
+}
+
+.main-index>section {
+    margin-top: 20vh;
+}
+
+.main-index>section>p {
+    font-size: 2rem;
+}
+
+.section-index{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-index>a>i{
+    font-size: 40px;
+    color: #26B671;
+}
+
+.section-index>a>p{
+    color: #26B671;
+}
+
+.section-index>a{
+    margin-top: 10vh;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    border: 2px solid #26B671;
+}
+
+.section-index>a:hover>i,
+.section-index>a:hover>p {
+    color: white; /* Mudar a cor do texto para branco no hover */
+}
+
+.section-index>a:hover {
+    background-color: #26B671; /* Mudar a cor de fundo para #26B671 no hover */
+}
+
+
+@media only screen and (max-width: 860px) {
+    nav .logo {
+        font-size: 1.2rem;
+    }
+
+    nav>div>a {
+        font-size: 0.8rem;
+    }
+
+    .main-index>section>p {
+        font-size: 1rem;
+    }
+}

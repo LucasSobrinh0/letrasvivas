@@ -1,0 +1,13 @@
+.main-ler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-ler>div{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 5vh;
+}
