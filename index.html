@@ -5,42 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Change Text with Highlighted Buttons</title>
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
 
-        .container {
-            height: 100vh;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-        }
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
 
-        .text {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            scroll-snap-align: start;
-            padding: 10px;
-            box-sizing: border-box; /* Garante que o padding não afete o tamanho total */
-        }
+.text {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    scroll-snap-align: start;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
 
-        .buttons {
-            position: fixed;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-        }
+.buttons {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        .button.active {
-            background-color: #4CAF50;
-            color: white;
-        }
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #007BFF; /* Azul padrão para botões não ativos */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.active {
+    background-color: #FF0000; /* Vermelho para destacar o botão ativo */
+    transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+    .text {
+        font-size: 18px;
+        padding: 5px;
+    }
+    
+    button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -63,28 +96,29 @@
         <div id="text7" class="text">Mantenha o quarto escuro, silencioso e fresco. Use cortinas blackout, máscaras de olho ou máquinas de ruído branco se necessário. Certifique-se de que seu colchão e travesseiros sejam confortáveis e adequados ao seu estilo de dormir.</div>
     </div>
     <script>
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                const textNumber = this.getAttribute('id').replace('btn', '');
-                document.getElementById('text' + textNumber).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', function() {
+        const textNumber = this.getAttribute('id').replace('btn', '');
+        document.getElementById('text' + textNumber).scrollIntoView({
+            behavior: 'smooth'
         });
+    });
+});
 
-        // Adiciona funcionalidade para destacar o botão correspondente à seção visível
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
-                    document.querySelector(`#btn${entry.target.id.replace('text', '')}`).classList.add('active');
-                }
-            });
-        }, {threshold: 0.5});
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.id.replace('text', '');
+            document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`#btn${id}`).classList.add('active');
+        }
+    });
+}, { threshold: 0.5 }); // Adjusted threshold for better accuracy
 
-        document.querySelectorAll('.text').forEach(text => {
-            observer.observe(text);
-        });
+document.querySelectorAll('.text').forEach(text => {
+    observer.observe(text);
+});
+
     </script>
 </body>
 </html>
