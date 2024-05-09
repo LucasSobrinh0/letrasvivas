@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Change Text with Highlighted Buttons</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .text {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            scroll-snap-align: start;
+            padding: 10px;
+            box-sizing: border-box; /* Garante que o padding não afete o tamanho total */
+        }
+
+        .buttons {
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id="btn1">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button>
+        <button id="btn4">4</button>
+        <button id="btn5">5</button>
+        <button id="btn6">6</button>
+        <button id="btn7">7</button>
+    </div>
+    <div class="container">
+        <div id="text1" class="text">A higiene do sono refere-se a um conjunto de práticas e hábitos que podem melhorar significativamente a qualidade e a duração do seu sono.</div>
+        <div id="text2" class="text">Afinal, dormir bem não é apenas uma questão de descanso, mas uma peça fundamental para a saúde física e mental.</div>
+        <div id="text3" class="text">A higiene do sono funciona criando um ambiente e uma rotina que promovem o sono de qualidade.</div>
+        <div id="text4" class="text">Isso envolve ajustar fatores do seu estilo de vida e do ambiente ao seu redor para ajudar a regular seus ritmos biológicos e induzir o sono mais facilmente.</div>
+        <div id="text5" class="text">Para começar, tente deitar e levantar sempre nos mesmos horários, mesmo nos fins de semana. Isso ajuda a regular o seu relógio biológico e melhora a qualidade do seu sono.</div>
+        <div id="text6" class="text">Desenvolva um ritual antes de dormir que pode incluir leitura, meditação, ou um banho quente. Essas atividades ajudam a sinalizar ao corpo que é hora de desacelerar e se preparar para dormir.</div>
+        <div id="text7" class="text">Mantenha o quarto escuro, silencioso e fresco. Use cortinas blackout, máscaras de olho ou máquinas de ruído branco se necessário. Certifique-se de que seu colchão e travesseiros sejam confortáveis e adequados ao seu estilo de dormir.</div>
+    </div>
+    <script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const textNumber = this.getAttribute('id').replace('btn', '');
+                document.getElementById('text' + textNumber).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Adiciona funcionalidade para destacar o botão correspondente à seção visível
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+                    document.querySelector(`#btn${entry.target.id.replace('text', '')}`).classList.add('active');
+                }
+            });
+        }, {threshold: 0.5});
+
+        document.querySelectorAll('.text').forEach(text => {
+            observer.observe(text);
+        });
+    </script>
+</body>
+</html>
