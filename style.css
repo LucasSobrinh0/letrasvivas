@@ -145,6 +145,51 @@ section .div-image::before {
     z-index: -2;
 }
 
+#contato {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contato-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .contato-item {
+    margin: 0 20px;
+    font-size: 18px;
+  }
+
+  .contato-item i {
+    margin-right: 5px;
+  }
+
+  .contato-item a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .contato-text {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .contato-text p {
+    margin-bottom: 20px;
+  }
+
+  .contato-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
 @media only screen and (max-width: 860px) {
     nav .logo {
