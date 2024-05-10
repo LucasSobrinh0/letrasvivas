@@ -118,7 +118,7 @@ section .div-about p {
 section .div-image {
     position: relative;
     display: block;
-    width: 300px; /* Ajuste conforme necessário */
+    width: 500px; /* Ajuste conforme necessário */
     margin-top: 5vh;
 }
 
@@ -138,7 +138,7 @@ section .div-image::before {
     border-bottom-left-radius: 80px;
     top: -23px; /* Ajuste a posição vertical como desejar */
     left: 30px; /* Ajuste a posição horizontal como desejar */
-    width: 300px; /* A largura do pseudoelemento deve corresponder à da imagem */
+    width: 500px; /* A largura do pseudoelemento deve corresponder à da imagem */
     height: calc(100% + 1px); /* Ajustar conforme necessário para cobrir a altura da imagem */
     border: 2px solid #FC0404; /* Ajuste a cor e espessura da borda como desejar */
     box-sizing: border-box;
@@ -161,5 +161,13 @@ section .div-image::before {
 
     section .div-about p {
         font-size: 0.8rem;
+    }
+
+    section .div-image{
+        width: 240px;
+    }
+
+    section .div-image::before{
+        width: 240px;
     }
 }
