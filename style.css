@@ -12,11 +12,15 @@ a {
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     /* Para alinhar verticalmente ao centro */
     padding: 20px;
     background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav .logo {

@@ -16,4 +16,4 @@ function changeText() {
 }
 
 // Inicializa a primeira transição imediatamente após a página carregar
-setInterval(changeText, 1500);
+setInterval(changeText, 1200);
