@@ -191,6 +191,10 @@ section .div-image::before {
     font-weight: bold;
   }
 
+  .margem{
+    height: 40vh;
+}
+
 @media only screen and (max-width: 860px) {
     nav .logo {
         font-size: 1rem;
