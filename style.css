@@ -159,12 +159,14 @@ section .div-image::before {
   .contato-info {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-top: 20px;
   }
 
   .contato-item {
     margin: 0 20px;
     font-size: 18px;
+    margin-top: 20px;
   }
 
   .contato-item i {
