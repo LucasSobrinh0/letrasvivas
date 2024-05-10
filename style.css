@@ -108,7 +108,7 @@ section .div-about h2 {
 }
 
 section .div-about h2 span {
-    color: #FC0404;
+    color: #26B671;
 }
 
 section .div-about p {
@@ -140,7 +140,7 @@ section .div-image::before {
     left: 30px; /* Ajuste a posição horizontal como desejar */
     width: 500px; /* A largura do pseudoelemento deve corresponder à da imagem */
     height: calc(100% + 1px); /* Ajustar conforme necessário para cobrir a altura da imagem */
-    border: 2px solid #FC0404; /* Ajuste a cor e espessura da borda como desejar */
+    border: 2px solid #26B671; /* Ajuste a cor e espessura da borda como desejar */
     box-sizing: border-box;
     z-index: -2;
 }
