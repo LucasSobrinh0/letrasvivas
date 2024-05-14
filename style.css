@@ -211,7 +211,11 @@ section .div-image::before {
     }
 
     section .div-about p {
-        font-size: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .contato-text p{
+        font-size: 1rem;
     }
 
     section .div-image{

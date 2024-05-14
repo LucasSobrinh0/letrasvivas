@@ -50,7 +50,6 @@
         }
 
         button {
-            padding: 8px 16px;
             margin: 5px;
             background-color: #007BFF;
             /* Azul padrão para botões não ativos */
@@ -72,6 +71,45 @@
             transform: scale(1.15);
         }
 
+        #scroll-down-arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        #scroll-down-arrow i {
+            font-size: 24px;
+        }
+
+
         @media (max-width: 600px) {
             .text {
                 font-size: 18px;
@@ -83,7 +121,6 @@
                 font-size: 14px;
             }
         }
-
     </style>
 </head>
 
@@ -97,17 +134,22 @@
         </div>
     </nav>
     <div class="buttons">
-        <button id="btn1">1</button>
+        <button id="btn1" class="active">1</button>
         <button id="btn2">2</button>
         <button id="btn3">3</button>
         <button id="btn4">4</button>
         <button id="btn5">5</button>
         <button id="btn6">6</button>
         <button id="btn7">7</button>
+        <button id="btn8">8</button>
+        <button id="btn9">9</button>
+        <button id="btn10">10</button>
+        <button id="btn11">11</button>
+        <button id="btn12">12</button>
     </div>
     <div class="container">
-        <div id="text1" class="text">A higiene do sono refere-se a um conjunto de práticas e hábitos que podem melhorar
-            significativamente a qualidade e a duração do seu sono.</div>
+        <div id="text1" class="text visible">A higiene do sono refere-se a um conjunto de práticas e hábitos que podem
+            melhorar significativamente a qualidade e a duração do seu sono.</div>
         <div id="text2" class="text">Afinal, dormir bem não é apenas uma questão de descanso, mas uma peça fundamental
             para a saúde física e mental.</div>
         <div id="text3" class="text">A higiene do sono funciona criando um ambiente e uma rotina que promovem o sono de
@@ -122,7 +164,24 @@
         <div id="text7" class="text">Mantenha o quarto escuro, silencioso e fresco. Use cortinas blackout, máscaras de
             olho ou máquinas de ruído branco se necessário. Certifique-se de que seu colchão e travesseiros sejam
             confortáveis e adequados ao seu estilo de dormir.</div>
+        <div id="text8" class="text">Evite cafeína, nicotina e álcool perto da hora de dormir. Essas substâncias podem
+            atrapalhar seu sono e prejudicar a qualidade do mesmo.</div>
+        <div id="text9" class="text">Pratique atividade física regularmente, mas evite exercícios intensos perto da hora
+            de dormir. O ideal é fazer exercícios de relaxamento, como ioga ou alongamento, no final do dia.</div>
+        <div id="text10" class="text">Limite a exposição à luz artificial, especialmente de telas de dispositivos
+            eletrônicos, antes de dormir. A luz azul emitida por esses dispositivos pode interferir na produção de
+            melatonina, o hormônio do sono.</div>
+        <div id="text11" class="text">Mantenha uma dieta equilibrada e evite refeições pesadas antes de dormir. Comer
+            alimentos leves e saudáveis pode facilitar o processo de digestão e contribuir para uma noite de sono mais
+            tranquila.</div>
+        <div id="text12" class="text">Se você tiver problemas persistentes de sono, como insônia, apneia do sono ou
+            síndrome das pernas inquietas, consulte um médico especialista em sono. O diagnóstico correto e o tratamento
+            adequado podem melhorar significativamente a qualidade do seu sono e sua qualidade de vida.</div>
     </div>
+    <div id="scroll-down-arrow">
+        <i class="bi bi-arrow-down"></i>
+    </div>
+
     <script>
         document.querySelectorAll('button').forEach(button => {
             button.addEventListener('click', function () {
@@ -146,6 +205,14 @@
         document.querySelectorAll('.text').forEach(text => {
             observer.observe(text);
         });
+
+        document.getElementById('scroll-down-arrow').addEventListener('click', function () {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+
 
     </script>
 </body>
