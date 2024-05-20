@@ -3,14 +3,19 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 2vh;
 }
 
 .main-ler>div{
-    max-width: 90%;
+    width: 500px;
     border: 2px solid black;
     padding: 5px;
     border-radius: 20px;
-    margin-top: 5vh;
+}
+
+@media only screen and (max-width: 860px){
+    .main-ler>div{
+        max-width: 90%;
+    }
 }
 
