@@ -63,11 +63,11 @@ nav>div>a:hover {
 
 .section-index>a>i{
     font-size: 40px;
-    color: #26B671;
+    color: #0072f5;
 }
 
 .section-index>a>p{
-    color: #26B671;
+    color: #0072f5;
 }
 
 .section-index>a{
@@ -78,7 +78,7 @@ nav>div>a:hover {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: white;
-    border: 2px solid #26B671;
+    border: 2px solid #0072f5;
 }
 
 .section-index>a:hover>i,
@@ -87,7 +87,7 @@ nav>div>a:hover {
 }
 
 .section-index>a:hover {
-    background-color: #26B671; /* Mudar a cor de fundo para #26B671 no hover */
+    background-color: #0072f5; /* Mudar a cor de fundo para #26B671 no hover */
 }
 
 section {
@@ -108,7 +108,7 @@ section .div-about h2 {
 }
 
 section .div-about h2 span {
-    color: #26B671;
+    color: #0072f5;
 }
 
 section .div-about p {
@@ -140,7 +140,7 @@ section .div-image::before {
     left: 30px; /* Ajuste a posição horizontal como desejar */
     width: 500px; /* A largura do pseudoelemento deve corresponder à da imagem */
     height: calc(100% + 1px); /* Ajustar conforme necessário para cobrir a altura da imagem */
-    border: 2px solid #26B671; /* Ajuste a cor e espessura da borda como desejar */
+    border: 2px solid #0072f5; /* Ajuste a cor e espessura da borda como desejar */
     box-sizing: border-box;
     z-index: -2;
 }
