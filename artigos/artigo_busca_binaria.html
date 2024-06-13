@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Experimento de Milgram</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            margin-top: 0vh;
+        }
+
+        .text {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            scroll-snap-align: start;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .buttons {
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sidebar {
+            margin-top: 12vh;
+            display: flex;
+            flex-direction: column;
+            width: 60px;
+            background-color: #f1f1f1;
+            overflow-y: auto;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            background: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .sidebar button:hover {
+            background-color: #4CAF50;
+        }
+
+        .content {
+            margin-left: 70px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .text {
+            height: 100vh;
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .sidebar {
+                flex-direction: row;
+                width: 100%;
+                height: auto;
+                overflow-x: auto;
+            }
+
+            .content {
+                margin-left: 0;
+                margin-top: 60px;
+            }
+
+            .sidebar button {
+                flex: 1;
+            }
+        }
+
+        #scroll-down-arrow {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        #scroll-down-arrow i {
+            font-size: 24px;
+        }
+
+
+        @media (max-width: 600px) {
+            .text {
+                font-size: 18px;
+                padding: 5px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">LetrasVivas</a>
+        <div>
+            <a href="../index.html">INICIO</a>
+            <a href="../index.html#sobre">SOBRE</a>
+            <a href="../index.html#contato">CONTATO</a>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <button id="btn1" class="active">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button>
+        <button id="btn4">4</button>
+        <button id="btn5">5</button>
+        <button id="btn6">6</button>
+        <button id="btn7">7</button>
+        <button id="btn8">8</button>
+        <button id="btn9">9</button>
+        <button id="btn10">10</button>
+        <button id="btn11">11</button>
+        <button id="btn12">12</button>
+        <button id="btn13">13</button>
+        <button id="btn14">14</button>
+    </div>
+    <div class="container">
+        <div id="text1" class="text visible">A busca binária é um algoritmo eficiente para encontrar um elemento em uma
+            lista ordenada.</div>
+        <div id="text2" class="text">O princípio básico é dividir repetidamente a lista em metades até que o elemento
+            desejado seja encontrado ou que a lista seja reduzida a zero.</div>
+        <div id="text3" class="text">A eficiência da busca binária vem do fato de que, a cada iteração, metade dos
+            elementos são descartados, resultando em um tempo de execução de O(log n).</div>
+        <div id="text4" class="text">Como Usar Busca Binária? <br>
+            Pré-requisito: A lista deve estar ordenada.</div>
+        <div id="text5" class="text">Passos: Defina o ponto inicial e final da lista. <br>
+            Calcule o ponto médio.<br> <br>
+            Compare o elemento do ponto médio com o elemento desejado <br><br>
+            Se o elemento desejado for igual ao elemento do ponto médio, a busca é concluída.</div>
+        <div id="text6" class="text">
+            Se o elemento desejado for menor, ajuste o ponto final para o índice do ponto médio - 1. <br><br>
+            Se o elemento desejado for maior, ajuste o ponto inicial para o índice do ponto médio + 1. <br><br>
+            Repita até encontrar o elemento ou os pontos inicial e final se cruzarem.</div>
+        <div id="text7" class="text">O "aprendiz" (cúmplice) foi amarrado a uma cadeira com eletrodos e instruído a
+            aprender pares de palavras. O "professor" testaria o aprendizado, apresentando uma palavra e pedindo ao
+            aluno para identificar seu par entre quatro opções.</div>
+        <div id="text8" class="text">O voluntário (professor) foi instruído a administrar choques elétricos ao aluno
+            sempre que este errasse, aumentando o nível de intensidade a cada erro. O gerador de choque tinha 30 níveis,
+            variando de 15 volts (ligeiro choque) a 450 volts (choque grave).</div>
+        <div id="text9" class="text">O aluno errava propositalmente, levando o professor a administrar choques
+            elétricos. O experimentador repetia uma série de frases de estímulo para garantir a continuidade do
+            experimento, com quatro frases sucessivas se a primeira não fosse obedecida.</div>
+        <div id="text10" class="text">Estímulo 1: Por favor, continue.<br>Estímulo 2: O experimento requer que você
+            continue.<br>Estímulo 3: É absolutamente essencial que você continue.<br>Estímulo 4: Você não tem outra
+            escolha a não ser continuar.</div>
+        <div id="text11" class="text">Caso o participante se negasse a fazê-lo depois da quarta frase, o experimento era
+            interrompido. Caso contrário, o experimento só era interrompido ao chegar na voltagem mais alta. </div>
+        <div id="text12" class="text">Ao final do experimento, Milgram era chamado na sala como um auxiliar do
+            "pesquisador" para fazer algumas perguntas ao professor (participante), como o porque de ter continuado
+            mesmo quando escutava os gritos de dor do outro ou quando o outro não emitia mais nenhum ruído ou respondia
+            as questões. </div>
+        <div id="text13" class="text">Resultado: 65% (dois terços) dos participantes continuaram até o mais alto nível
+            de 450 volts. Todos os participantes continuaram até 300 volts. </div>
+        <a href="https://pt.wikipedia.org/wiki/Experi%C3%AAncia_de_Milgram#cite_note-1" id="text14" class="text">Leia o
+            artigo completo em: https://pt.wikipedia.org/wiki/Experi%C3%AAncia_de_Milgram#cite_note-1</a>
+        <!-- <div id="text20" class="text"></div> -->
+
+        <div id="scroll-down-arrow">
+            <i class="bi bi-arrow-down"></i>
+        </div>
+
+        <script>
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const textNumber = this.getAttribute('id').replace('btn', '');
+                    document.getElementById('text' + textNumber).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id.replace('text', '');
+                        document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+                        document.querySelector(`#btn${id}`).classList.add('active');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.text').forEach(text => {
+                observer.observe(text);
+            });
+        </script>
+</body>
+
+</html>
