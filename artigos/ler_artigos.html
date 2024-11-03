@@ -4,55 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ler Artigos - LetrasVivas</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style-artigos.css">
-    <link rel="icon" href="../img/logo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Saiba maiss</title>
 </head>
 
 <body>
+    <!-- Navegação -->
     <nav>
-        <a href="../index.html" class="logo">LetrasVivas</a>
-        <div>
-            <a href="../index.html">INICIO</a>
-            <a href="../index.html#sobre">SOBRE</a>
-            <a href="../index.html#contato">CONTATO</a>
+        <div class="container">
+            <a href="../index.html" class="logo">Letras<span>Vivas</span></a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul class="menu">
+                <li><a href="../index.html#inicio">Início</a></li>
+                <li><a href="../index.html#sobre">Sobre</a></li>
+                <li><a href="../index.html#recursos">Recursos</a></li>
+                <li><a href="../index.html#depoimentos">Depoimentos</a></li>
+                <li><a href="../index.html#contato">Contato</a></li>
+            </ul>
         </div>
     </nav>
-    <!-- <main class="main-ler" style="margin-top: 15vh;">
-        <div>
-            <h2>Higiene do sono</h2>
-            <p>Aprenda a dormir melhor e controlar sua ansiedade antes de dormir</p>
-            <a href="artigo_higiene_do_sono.html">Saiba mais</a>
+
+    <!-- Seção de Artigos -->
+    <section id="artigos">
+        <div class="container">
+            <h2>Nossos <span>Artigos</span></h2>
+            <div class="artigos-content">
+                <!-- Artigo 1 -->
+                <div class="artigo-item">
+                    <!-- <img src="../img/milgram.jpg" alt="Experiência de Milgram"> -->
+                    <h3>Experiência de Milgram</h3>
+                    <p>Revelando a tendência à obediência: como 65% dos participantes do experimento de Milgram aplicaram 450 volts em pessoas desconhecidas.</p>
+                    <a href="artigo_experiencia_de_milgram.html" class="btn-primary">Saiba Mais</a>
+                </div>
+                <!-- Adicione mais artigos conforme necessário -->
+            </div>
         </div>
-    </main>
-    <div class="main-ler">
-        <div>
-            <h2>As bases da psicologia cognitiva</h2>
-            <p>Psicologia Cognitiva: História, Processos e Teorias. Uma rápida imersão na essência desta disciplina,
-                abordando a teoria do processamento da informação e a distinção entre Psicologia Cognitiva e Ciência
-                Cognitiva. Pronto para descobrir mais?</p>
-            <a href="artigo_base_psicologia_cognitiva.html">Saiba mais</a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 LetrasVivas. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/letsvivas" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/letsvivas" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
-    </div> -->
-    <div class="main-ler" style="margin-top: 15vh;">
-        <div>
-            <h2>Experiência de Milgram</h2>
-            <p>Revelando a Tendência à Obediência: Como 65% dos Participantes do Experimento de Milgram Aplicaram 450 Volts em Pessoas Desconhecidas</p>
-            <a href="artigo_experiencia_de_milgram.html">Saiba mais</a>
-        </div>
-    </div>
-    <!-- <div class="main-ler">
-        <div>
-            <h2>Busca Binária</h2>
-            <p>Faça buscas em uma lista ordenada de forma rápido e fácil.</p>
-            <a href="artigo_busca_binaria.html">Saiba mais</a>
-        </div>
-    </div> -->
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../script.js"></script>
 </body>
 
 </html>

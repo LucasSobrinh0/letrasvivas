@@ -1,228 +1,423 @@
-body {
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poetsen One", sans-serif;
-    font-style: normal;
 }
 
-a {
-    text-decoration: none;
+/* Fonte Principal */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
+/* Navegação */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Para alinhar verticalmente ao centro */
-    padding: 20px;
-    background-color: white;
+    background-color: #fff;
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
 }
 
 nav .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0072f5;
     text-decoration: none;
-    font-weight: bold;
-    /* Deixe o texto do logo em negrito */
-    color: black;
-    font-size: 2rem;
 }
 
-nav>div>a {
-    color: black;
-    font-size: 1.2rem;
-    margin-left: 10px;
+nav .logo span {
+    color: #ff6f61;
 }
 
-nav>div>a:hover {
-    border-bottom: 2px solid black;
-}
-
-.main-index {
+nav .menu {
+    list-style: none;
     display: flex;
-    justify-content: center;
 }
 
-.main-index>section {
-    margin-top: 20vh;
+nav .menu li {
+    margin-left: 30px;
 }
 
-.main-index>section>p {
-    font-size: 2rem;
+nav .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.section-index{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 10vh;
-}
-
-.section-index>a>i{
-    font-size: 40px;
+nav .menu li a:hover {
     color: #0072f5;
 }
 
-.section-index>a>p{
-    color: #0072f5;
+/* Menu Responsivo */
+nav .menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.section-index>a{
-    margin-top: 10vh;
-    border-radius: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: white;
-    border: 2px solid #0072f5;
+#menu-toggle {
+    display: none;
 }
 
-.section-index>a:hover>i,
-.section-index>a:hover>p {
-    color: white; /* Mudar a cor do texto para branco no hover */
+@media (max-width: 768px) {
+    nav .menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav .menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        max-height: 300px;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
 }
 
-.section-index>a:hover {
-    background-color: #0072f5; /* Mudar a cor de fundo para #26B671 no hover */
+/* Botões */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px; /* Ajuste conforme necessário */
+.btn-primary {
+    background-color: #ff6f61;
+    color: #fff;
 }
 
-section .div-about {
-    width: 70%;
+.btn-primary:hover {
+    background-color: #e65a50;
 }
 
-section .div-about h2 {
-    font-size: 2rem;
+.btn-secondary {
+    background-color: #0072f5;
+    color: #fff;
 }
 
-section .div-about h2 span {
-    color: #0072f5;
+.btn-secondary:hover {
+    background-color: #005bb5;
 }
 
-section .div-about p {
-    font-size: 1.2rem;
-}
-
-section .div-image {
+/* Cabeçalho Principal */
+header {
     position: relative;
-    display: block;
-    width: 500px; /* Ajuste conforme necessário */
-    margin-top: 5vh;
-}
-
-section .div-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 80px;
-    z-index: 100;
-}
-
-section .div-image::before {
-    content: '';
-    position: absolute;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 80px;
-    top: -23px; /* Ajuste a posição vertical como desejar */
-    left: 30px; /* Ajuste a posição horizontal como desejar */
-    width: 500px; /* A largura do pseudoelemento deve corresponder à da imagem */
-    height: calc(100% + 1px); /* Ajustar conforme necessário para cobrir a altura da imagem */
-    border: 2px solid #0072f5; /* Ajuste a cor e espessura da borda como desejar */
-    box-sizing: border-box;
-    z-index: -2;
-}
-
-#contato {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-  }
-
-  .container {
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .contato-info {
+    height: 80vh;
+    background: linear-gradient(135deg, #0072f5 0%, #ff6f61 100%);
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-  }
+    text-align: center;
+    color: #fff;
+    padding: 0 5%;
+}
 
-  .contato-item {
-    margin: 0 20px;
-    font-size: 18px;
-    margin-top: 20px;
-  }
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
 
-  .contato-item i {
-    margin-right: 5px;
-  }
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
 
-  .contato-item a {
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seção Recursos */
+#recursos {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#recursos h2 {
+    font-size: 2.5rem;
+    color: #0072f5;
+    margin-bottom: 50px;
+}
+
+#recursos h2 span {
+    color: #ff6f61;
+}
+
+.recursos-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recurso-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.recurso-item:hover {
+    transform: translateY(-10px);
+}
+
+.recurso-item i {
+    font-size: 3rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.recurso-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.recurso-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Seção Sobre */
+/* Seção Sobre */
+#sobre {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.sobre-content {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center;    /* Centraliza horizontalmente */
+    text-align: center;     /* Centraliza o texto */
+}
+
+.sobre-text {
+    max-width: 800px;       /* Define uma largura máxima para o texto */
+    padding: 20px;
+}
+
+.sobre-text h2 {
+    font-size: 2.5rem;
+    color: #0072f5;
+    margin-bottom: 20px;
+}
+
+.sobre-text h2 span {
+    color: #ff6f61;
+}
+
+.sobre-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Seção Depoimentos */
+#depoimentos {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#depoimentos h2 {
+    font-size: 2.5rem;
+    color: #0072f5;
+    margin-bottom: 50px;
+}
+
+#depoimentos h2 span {
+    color: #ff6f61;
+}
+
+.depoimentos-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.depoimento-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 15px;
+    padding: 30px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    position: relative;
+}
+
+.depoimento-item::before {
+    content: "“";
+    font-size: 4rem;
+    color: #ff6f61;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+}
+
+.depoimento-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.depoimento-item h4 {
+    font-size: 1.1rem;
+    color: #0072f5;
+}
+
+/* Seção CTA */
+#cta {
+    padding: 60px 0;
+    background-color: #0072f5;
+    text-align: center;
+    color: #fff;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Contato */
+#contato {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    color: #0072f5;
+    margin-bottom: 20px;
+}
+
+#contato h2 span {
+    color: #ff6f61;
+}
+
+#contato p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contato-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contato-item {
+    margin: 20px;
+    font-size: 1.2rem;
+}
+
+.contato-item i {
+    color: #ff6f61;
+    margin-right: 10px;
+}
+
+.contato-item a {
     color: #333;
     text-decoration: none;
-  }
-
-  .contato-text {
-    margin-top: 20px;
-    font-size: 20px;
-  }
-
-  .contato-text p {
-    margin-bottom: 20px;
-  }
-
-  .contato-text a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .margem{
-    height: 40vh;
+    transition: color 0.3s;
 }
 
-@media only screen and (max-width: 860px) {
-    nav .logo {
+.contato-item a:hover {
+    color: #0072f5;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6f61;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .sobre-content {
+        flex-direction: column-reverse;
+    }
+
+    .sobre-text, .sobre-image {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
         font-size: 1rem;
     }
 
-    nav>div>a {
-        font-size: 0.7rem;
-    }
-
-    .main-index>section>p {
-        font-size: 1rem;
-    }
-
-    section .div-about p {
-        font-size: 1rem;
-    }
-
-    .contato-text p{
-        font-size: 1rem;
-    }
-
-    section .div-image{
-        width: 240px;
-    }
-
-    section .div-image::before{
-        width: 240px;
+    .header-content .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }

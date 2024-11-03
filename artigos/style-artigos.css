@@ -1,21 +1,74 @@
-.main-ler {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Estilos para a página de artigos */
+
+/* Seção de Artigos */
+#artigos {
+    padding: 80px 0;
+    background-color: #f9f9f9;
     text-align: center;
-    margin-top: 2vh;
 }
 
-.main-ler>div{
-    width: 500px;
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 20px;
+#artigos h2 {
+    font-size: 2.5rem;
+    color: #0072f5;
+    margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 860px){
-    .main-ler>div{
-        max-width: 90%;
+#artigos h2 span {
+    color: #ff6f61;
+}
+
+.artigos-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artigo-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.artigo-item:hover {
+    transform: translateY(-10px);
+}
+
+.artigo-item img {
+    width: 100%;
+    height: auto;
+}
+
+.artigo-item h3 {
+    font-size: 1.5rem;
+    color: #0072f5;
+    margin: 15px 0;
+}
+
+.artigo-item p {
+    font-size: 1rem;
+    padding: 0 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.artigo-item .btn-primary {
+    margin: 20px 0;
+}
+
+.artigo-item .btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .artigos-content {
+        flex-direction: column;
+        align-items: center;
     }
 }
-

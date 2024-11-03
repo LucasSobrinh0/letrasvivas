@@ -1,19 +1,22 @@
-let phrases = [
+const phrases = [
     "Aprenda de forma rápida e iterativa",
     "Leia de forma simples e direta",
-    "Encontre novos horizontes"
+    "Encontre novos horizontes",
+    "Descubra o prazer da leitura",
+    "Transforme conhecimento em ação"
 ];
+
 let currentIndex = 0;
+const textElement = document.querySelector('.animated-text');
 
 function changeText() {
-    const textElement = document.querySelector('.animated-text');
-    currentIndex = (currentIndex + 1) % phrases.length;
-    textElement.style.opacity = '0';
+    textElement.classList.add('fade-out');
     setTimeout(() => {
-        textElement.innerText = phrases[currentIndex];
-        textElement.style.opacity = '1';
-    }, 500); // Espera meio segundo para mudar a opacidade e iniciar a nova frase
+        currentIndex = (currentIndex + 1) % phrases.length;
+        textElement.textContent = phrases[currentIndex];
+        textElement.classList.remove('fade-out');
+        textElement.classList.add('fade-in');
+    }, 500);
 }
 
-// Inicializa a primeira transição imediatamente após a página carregar
-setInterval(changeText, 1200);
+setInterval(changeText, 4000);

@@ -4,67 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>LetrasVivas - Início</title>
+    <!-- Favicon -->
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Inicio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Navegação -->
     <nav>
-        <a href="index.html" class="logo">LetrasVivas</a>
-        <div>
-            <a href="index.html">INICIO</a>
-            <a href="#sobre">SOBRE</a>
-            <a href="#contato">CONTATO</a>
+        <div class="container">
+            <a href="#" class="logo">Letras<span>Vivas</span></a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </div>
     </nav>
-    <main class="main-index">
-        <section>
-            <p class="animated-text">Aprenda de forma rápida e iterativa</p>
-        </section>
-    </main>
-    <section class="section-index">
-        <a href="artigos/ler_artigos.html">
-            <i class="bi bi-journal-text"></i>
-            <p>Ler Artigos<p>
-        </a>
+
+    <!-- Seção Principal -->
+    <header id="inicio">
+        <div class="header-content">
+            <h1 class="animated-text">Aprenda de forma rápida e iterativa</h1>
+            <p>Descubra uma nova maneira de absorver conhecimento sem esforço.</p>
+            <a href="artigos/ler_artigos.html" class="btn-primary">Comece Agora <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+    <!-- Seção Recursos -->
+    <section id="recursos">
+        <div class="container">
+            <h2>Nossos <span>Recursos</span></h2>
+            <div class="recursos-content">
+                <div class="recurso-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Leitura Gradual</h3>
+                    <p>Assimile conteúdo aos poucos, facilitando a compreensão e retenção de informações.</p>
+                </div>
+                <div class="recurso-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Aprendizado Rápido</h3>
+                    <p>Métodos inovadores que aceleram o seu processo de aprendizado.</p>
+                </div>
+                <div class="recurso-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Comunidade</h3>
+                    <p>Interaja com outros leitores e compartilhe insights valiosos.</p>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Seção Sobre -->
     <section id="sobre">
-        <div class="div-about">
-            <h2>SOBRE A <span>PLATAFORMA</span></h2>
-            <p>Bem-vindo ao "LetrasVivas". Somos uma plataforma que utiliza uma metodologia inovadora de leitura
-                gradual para simplificar artigos científicos sobre psicologia. Inspirados pelo sucesso de plataformas
-                como TikTok e Instagram Reels, desenvolvemos uma abordagem única, onde o usuário começa com pequenos
-                trechos de texto simples. Conforme desliza a tela, ele lê gradativamente mais, sem perceber, tornando a
-                leitura mais acessível e envolvente.<br><br>
-
-                Inicialmente criada por Lucas Sobrinho, estudante de ADS na Faculdade Invest.<br><br>
-
-                Nosso objetivo é incentivar a leitura e facilitar o acesso ao conhecimento, proporcionando uma
-                experiência de aprendizado leve e estimulante.<br><br>
-
-                Explore nosso site e descubra como podemos ajudá-lo a se encontrar através da leitura.
-            </p>
-        </div>
-        <div class="div-image">
-            <img src="img/children.jpg" alt="">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Sobre a <span>Plataforma</span></h2>
+                    <p><strong>LetrasVivas</strong> é uma plataforma inovadora que simplifica a leitura de artigos científicos sobre psicologia. Inspirados pelas redes sociais modernas, oferecemos uma experiência de leitura gradual e envolvente.</p>
+                    <p>Nosso objetivo é facilitar o acesso ao conhecimento e tornar a aprendizagem uma jornada prazerosa.</p>
+                    <a href="artigos/ler_artigos.html" class="btn-secondary">Explore os Artigos</a>
+                </div>
+            </div>
         </div>
     </section>
+
+
+    <!-- Seção Depoimentos -->
+    <section id="depoimentos">
+        <div class="container">
+            <h2>O que dizem nossos <span>usuários</span></h2>
+            <div class="depoimentos-content">
+                <div class="depoimento-item">
+                    <p>"A plataforma mudou completamente a minha forma de estudar. Agora aprendo muito mais rápido!"</p>
+                    <h4>Maria Silva</h4>
+                </div>
+                <div class="depoimento-item">
+                    <p>"Os artigos são apresentados de maneira tão simples que fica fácil entender até os temas mais complexos."</p>
+                    <h4>João Santos</h4>
+                </div>
+                <div class="depoimento-item">
+                    <p>"Adoro a comunidade! É ótimo poder discutir ideias com outras pessoas interessadas."</p>
+                    <h4>Ana Oliveira</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Chamada para Ação -->
+    <!-- <section id="cta">
+        <div class="container">
+            <h2>Pronto para começar sua jornada de aprendizado?</h2>
+            <a href="cadastro.html" class="btn-primary">Cadastre-se Gratuitamente</a>
+        </div>
+    </section> -->
+
+    <!-- Contato -->
     <section id="contato">
         <div class="container">
-            <h2>Entre em Contato</h2>
-            <div class="contato-text">
-                <p>Estamos aqui para te ajudar! Se você tem dúvidas, sugestões, ou simplesmente quer dizer olá, fique à
-                    vontade para entrar em contato conosco.</p>
-                <p>Envie-nos um e-mail para <a
-                        href="mailto:lucas.sobrinho.crn@gmail.com">lucas.sobrinho.crn@gmail.com</a> ou conecte-se
-                    conosco através do LinkedIn.</p>
-            </div>
+            <h2>Entre em <span>Contato</span></h2>
+            <p>Tem alguma dúvida ou sugestão? Fale conosco!</p>
             <div class="contato-info">
                 <div class="contato-item">
                     <i class="fas fa-envelope"></i>
@@ -72,16 +121,26 @@
                 </div>
                 <div class="contato-item">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://br.linkedin.com/in/lucas-sobrinho-c" target="_blank">Lucas Sobrinho C.</a>
+                    <a href="https://br.linkedin.com/in/lucas-sobrinho-c" target="_blank">LinkedIn - Lucas Sobrinho C.</a>
                 </div>
             </div>
         </div>
     </section>
-    <div class="margem"></div>
 
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 LetrasVivas. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/letsvivas" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/letsvivas" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
-
 </body>
 
 </html>
