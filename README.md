@@ -11,9 +11,9 @@ O LetrasVivas é um website que visa auxiliar jovens a manter a concetração na
 
 ## Tecnologia Usadas
 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
 
 ## Como Usar
 
