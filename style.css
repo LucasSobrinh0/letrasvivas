@@ -10,7 +10,15 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     background-color: #f9f9f9;
-}
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
 
 /* Navegação */
 nav {
