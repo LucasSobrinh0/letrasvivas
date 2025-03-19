@@ -14,11 +14,11 @@ body {
     grid-template-rows: 1fr auto;
     min-height: 100vh;
     margin: 0;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
+}
 
 /* Navegação */
 nav {
@@ -36,6 +36,7 @@ nav .container {
     padding: 15px 5%;
 }
 
+/* Logo */
 nav .logo {
     font-size: 1.8rem;
     font-weight: 600;
@@ -47,39 +48,65 @@ nav .logo span {
     color: #ff6f61;
 }
 
-nav .menu {
+/* Agrupamento do menu e sininho */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Checkbox para menu responsivo */
+#menu-toggle {
+    display: none;
+}
+
+/* Ícone do menu hamburguer */
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Lista de links */
+.menu {
     list-style: none;
     display: flex;
 }
 
-nav .menu li {
+/* Itens da lista */
+.menu li {
     margin-left: 30px;
 }
 
-nav .menu li a {
+/* Links */
+.menu li a {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
-nav .menu li a:hover {
+.menu li a:hover {
     color: #0072f5;
 }
 
-/* Menu Responsivo */
-nav .menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+/* Ícone de notificação */
+.notification {
+    font-size: 1.3rem;
+    margin-left: 30px; /* Espaçamento entre o menu e o sininho */
+    color: #333;
+    transition: color 0.3s;
 }
 
-#menu-toggle {
-    display: none;
+.notification:hover {
+    color: #0072f5;
 }
 
+/* Responsivo - Tela até 768px */
 @media (max-width: 768px) {
-    nav .menu {
+
+    /* O menu em tela pequena vira coluna (drop-down) */
+    .menu {
         position: absolute;
         top: 60px;
         right: 0;
@@ -90,18 +117,27 @@ nav .menu-icon {
         flex-direction: column;
         transition: max-height 0.3s ease-in-out;
     }
-
-    nav .menu li {
-        margin: 25px 0;
+    
+    .menu li {
+        margin: 20px 0;
         text-align: center;
     }
 
+    /* Mostra o menu ao clicar no checkbox */
     #menu-toggle:checked + .menu-icon + .menu {
         max-height: 300px;
     }
 
-    nav .menu-icon {
+    /* Ícone do menu hamburguer aparece */
+    .menu-icon {
         display: block;
+    }
+
+    /* Sininho no mobile */
+    /* Caso queira que o sininho apareça DENTRO do menu ao abrir, você poderia
+       colocar esse ícone como item <li> do .menu. Mas aqui mantivemos fora. */
+    .notification {
+        margin-left: 15px;
     }
 }
 
@@ -224,7 +260,6 @@ header {
 }
 
 /* Seção Sobre */
-/* Seção Sobre */
 #sobre {
     padding: 80px 0;
     background-color: #f9f9f9;
@@ -257,7 +292,6 @@ header {
     line-height: 1.8;
     margin-bottom: 15px;
 }
-
 
 /* Seção Depoimentos */
 #depoimentos {
@@ -310,19 +344,6 @@ header {
 .depoimento-item h4 {
     font-size: 1.1rem;
     color: #0072f5;
-}
-
-/* Seção CTA */
-#cta {
-    padding: 60px 0;
-    background-color: #0072f5;
-    text-align: center;
-    color: #fff;
-}
-
-#cta h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
 }
 
 /* Contato */
@@ -400,32 +421,74 @@ footer p {
     color: #ff6f61;
 }
 
-/* Responsividade */
+/* Responsividade adicional para telas até 992px */
 @media (max-width: 992px) {
     .header-content h1 {
         font-size: 2.5rem;
     }
-
     .sobre-content {
         flex-direction: column-reverse;
     }
-
-    .sobre-text, .sobre-image {
+    .sobre-text {
         flex: 1 1 100%;
     }
 }
 
+/* Responsividade adicional para telas até 768px */
 @media (max-width: 768px) {
     .header-content h1 {
         font-size: 2rem;
     }
-
     .header-content p {
         font-size: 1rem;
     }
-
     .header-content .btn-primary, .btn-secondary {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
 }
+
+/* Botão de Curtir fixado à esquerda */
+.like-button {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #0072f5;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+  .like-button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Painel das notificações (exibido ao clicar no sininho) */
+  .notification-panel {
+    position: absolute;
+    top: 60px; /* Ajuste se necessário */
+    right: 20px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 2000;
+  }
+  
+  .notification-panel h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #0072f5;
+  }
+  
+  .notification-panel ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
