@@ -18,18 +18,38 @@
     <!-- Navegação -->
     <nav>
         <div class="container">
-            <a href="../html/index.html" class="logo">Letras<span>Vivas</span></a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-            <ul class="menu">
-                <li><a href="../html/index.html#inicio">Início</a></li>
-                <li><a href="../html/index.html#sobre">Sobre</a></li>
-                <li><a href="../html/index.html#recursos">Recursos</a></li>
-                <li><a href="../html/index.html#depoimentos">Depoimentos</a></li>
-                <li><a href="../html/index.html#contato">Contato</a></li>
-            </ul>
+            <a href="#" class="logo">Letras<span>Vivas</span></a>
+
+            <!-- Agrupamento do checkbox, label (ícone de menu), UL do menu e o sininho -->
+            <div class="nav-right">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+
+                <!-- Ícone do sininho -->
+                <a href="#" class="notification"><i class="fas fa-bell"></i></a>
+                <!-- Painel oculto que mostrará os artigos curtidos -->
+                <div id="notificationPanel" class="notification-panel" style="display: none;">
+                    <h4>Artigos Curtidos</h4>
+                    <ul id="likedArticlesList"></ul>
+                </div>
+
+            </div>
         </div>
     </nav>
+
+    <!-- Botão de curtir, fixado à esquerda -->
+    <div class="like-button" id="likeButton">
+        <i class="fas fa-thumbs-up"></i> Curtir
+    </div>
+
 
     <!-- Conteúdo do Artigo -->
     <div class="container-article">
@@ -42,32 +62,48 @@
         <div class="sections">
             <section id="section1" class="section">
                 <h2>Introdução</h2>
-                <p>O Experimento de Milgram foi um estudo conduzido pelo psicólogo Stanley Milgram em 1961 para investigar a obediência à autoridade.</p>
+                <p>O Experimento de Milgram foi um estudo conduzido pelo psicólogo Stanley Milgram em 1961 para
+                    investigar a obediência à autoridade.</p>
             </section>
             <section id="section2" class="section">
-                <p>Onde participantes aplicavam supostos choques elétricos em outras pessoas, revelando a tendência humana à conformidade mesmo em situações moralmente questionáveis.</p>
+                <p>Onde participantes aplicavam supostos choques elétricos em outras pessoas, revelando a tendência
+                    humana à conformidade mesmo em situações moralmente questionáveis.</p>
             </section>
             <section id="section3" class="section">
-                <p>Milgram investigou como pessoas obedeceriam a instruções para causar danos a outros, refletindo sobre a facilidade com que indivíduos comuns podem ser influenciados a cometer atrocidades, como observado durante a Segunda Guerra Mundial.</p>
+                <p>Milgram investigou como pessoas obedeceriam a instruções para causar danos a outros, refletindo sobre
+                    a facilidade com que indivíduos comuns podem ser influenciados a cometer atrocidades, como observado
+                    durante a Segunda Guerra Mundial.</p>
             </section>
             <section id="section4" class="section">
                 <h2>Procedimento</h2>
-                <p>No estudo, 40 homens, de 20 a 50 anos e com diversas ocupações, foram recrutados como voluntários para um experimento de laboratório.</p>
+                <p>No estudo, 40 homens, de 20 a 50 anos e com diversas ocupações, foram recrutados como voluntários
+                    para um experimento de laboratório.</p>
             </section>
             <section id="section5" class="section">
-                <p>Os participantes receberam US$ 4,50 e foram apresentados a outro participante, que era na verdade um cúmplice do experimentador (Milgram). Eles sorteavam papéis (aluno ou professor), mas o cúmplice sempre acabava sendo o aluno.</p>
+                <p>Os participantes receberam US$ 4,50 e foram apresentados a outro participante, que era na verdade um
+                    cúmplice do experimentador (Milgram). Eles sorteavam papéis (aluno ou professor), mas o cúmplice
+                    sempre acabava sendo o aluno.</p>
             </section>
             <section id="section6" class="section">
-                <p>No experimento, um "pesquisador" vestindo um jaleco cinza, interpretado por um ator, estava presente. Duas salas do Laboratório de Interação na Universidade de Yale foram utilizadas: uma para o aluno (com uma cadeira elétrica) e outra para o professor e o pesquisador, equipada com um gerador de choque elétrico.</p>
+                <p>No experimento, um "pesquisador" vestindo um jaleco cinza, interpretado por um ator, estava presente.
+                    Duas salas do Laboratório de Interação na Universidade de Yale foram utilizadas: uma para o aluno
+                    (com uma cadeira elétrica) e outra para o professor e o pesquisador, equipada com um gerador de
+                    choque elétrico.</p>
             </section>
             <section id="section7" class="section">
-                <p>O "aprendiz" (cúmplice) foi amarrado a uma cadeira com eletrodos e instruído a aprender pares de palavras. O "professor" testaria o aprendizado, apresentando uma palavra e pedindo ao aluno para identificar seu par entre quatro opções.</p>
+                <p>O "aprendiz" (cúmplice) foi amarrado a uma cadeira com eletrodos e instruído a aprender pares de
+                    palavras. O "professor" testaria o aprendizado, apresentando uma palavra e pedindo ao aluno para
+                    identificar seu par entre quatro opções.</p>
             </section>
             <section id="section8" class="section">
-                <p>O voluntário (professor) foi instruído a administrar choques elétricos ao aluno sempre que este errasse, aumentando o nível de intensidade a cada erro. O gerador de choque tinha 30 níveis, variando de 15 volts (ligeiro choque) a 450 volts (choque grave).</p>
+                <p>O voluntário (professor) foi instruído a administrar choques elétricos ao aluno sempre que este
+                    errasse, aumentando o nível de intensidade a cada erro. O gerador de choque tinha 30 níveis,
+                    variando de 15 volts (ligeiro choque) a 450 volts (choque grave).</p>
             </section>
             <section id="section9" class="section">
-                <p>O aluno errava propositalmente, levando o professor a administrar choques elétricos. O experimentador repetia uma série de frases de estímulo para garantir a continuidade do experimento, com quatro frases sucessivas se a primeira não fosse obedecida.</p>
+                <p>O aluno errava propositalmente, levando o professor a administrar choques elétricos. O experimentador
+                    repetia uma série de frases de estímulo para garantir a continuidade do experimento, com quatro
+                    frases sucessivas se a primeira não fosse obedecida.</p>
             </section>
             <section id="section10" class="section">
                 <h2>Frases de Estímulo</h2>
@@ -79,17 +115,23 @@
                 </p>
             </section>
             <section id="section11" class="section">
-                <p>Caso o participante se negasse a prosseguir após a quarta frase, o experimento era interrompido. Caso contrário, o experimento só era interrompido ao chegar na voltagem mais alta.</p>
+                <p>Caso o participante se negasse a prosseguir após a quarta frase, o experimento era interrompido. Caso
+                    contrário, o experimento só era interrompido ao chegar na voltagem mais alta.</p>
             </section>
             <section id="section12" class="section">
-                <p>Ao final do experimento, Milgram fazia perguntas ao professor (participante), como o porquê de ter continuado mesmo quando escutava os gritos de dor do outro ou quando o outro não emitia mais nenhum ruído ou respondia às questões.</p>
+                <p>Ao final do experimento, Milgram fazia perguntas ao professor (participante), como o porquê de ter
+                    continuado mesmo quando escutava os gritos de dor do outro ou quando o outro não emitia mais nenhum
+                    ruído ou respondia às questões.</p>
             </section>
             <section id="section13" class="section">
                 <h2>Resultados</h2>
-                <p>65% (dois terços) dos participantes continuaram até o mais alto nível de 450 volts. Todos os participantes continuaram até 300 volts.</p>
+                <p>65% (dois terços) dos participantes continuaram até o mais alto nível de 450 volts. Todos os
+                    participantes continuaram até 300 volts.</p>
             </section>
             <section id="section14" class="section">
-                <p>Leia o artigo completo em: <a href="https://pt.wikipedia.org/wiki/Experi%C3%AAncia_de_Milgram#cite_note-1" target="_blank">Wikipedia - Experiência de Milgram</a></p>
+                <p>Leia o artigo completo em: <a
+                        href="https://pt.wikipedia.org/wiki/Experi%C3%AAncia_de_Milgram#cite_note-1"
+                        target="_blank">Wikipedia - Experiência de Milgram</a></p>
             </section>
         </div>
 
@@ -101,6 +143,7 @@
 
     <!-- JavaScript -->
     <script src="../js/script-artigos.js"></script>
+    <script src="../js/like_button.js"></script>
 </body>
 
 </html>
