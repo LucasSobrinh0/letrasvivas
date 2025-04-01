@@ -4,11 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ler Artigos - LetrasVivas</title>
+    <meta name="description" content="Explore artigos sobre Tecnologia na plataforma LetrasVivas. Aprenda de forma simples e direta com conteúdos atualizados e acessíveis.">
+    <meta name="keywords" content="artigos tecnologia, leitura online, educação digital, aprendizado rápido, inovação tecnológica">
+    <meta name="author" content="">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <title>Ler Artigos - LetrasVivas | Tecnologia</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-artigos.css">
@@ -16,44 +35,39 @@
 
 <body>
     <!-- Navegação -->
-    <nav>
+    <nav aria-label="Navegação Principal">
         <div class="container">
-            <a href="../html/index.html" class="logo">Letras<span>Vivas</span></a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-            <ul class="menu">
-                <li><a href="../html/index.html#inicio">Início</a></li>
-                <li><a href="../html/index.html#sobre">Sobre</a></li>
-                <li><a href="../html/index.html#recursos">Recursos</a></li>
-                <li><a href="../html/index.html#depoimentos">Depoimentos</a></li>
-                <li><a href="../html/index.html#contato">Contato</a></li>
+            <a href="../html/index.html" class="logo" aria-label="Página inicial do LetrasVivas">
+                Letras<span>Vivas</span>
+            </a>
+
+            <!-- Botão de Menu Responsivo -->
+            <input type="checkbox" id="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <ul class="menu" role="menu">
+                <li><a href="../html/index.html#inicio" role="menuitem">Início</a></li>
+                <li><a href="../html/index.html#sobre" role="menuitem">Sobre</a></li>
+                <li><a href="../html/index.html#recursos" role="menuitem">Recursos</a></li>
+                <li><a href="../html/index.html#depoimentos" role="menuitem">Depoimentos</a></li>
+                <li><a href="../html/index.html#contato" role="menuitem">Contato</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </div>
     </nav>
 
     <!-- Seção de Artigos -->
-    <section id="artigos">
+    <section id="artigos" aria-labelledby="artigos-title">
         <div class="container">
-            <h2>Nossos <span>Artigos</span></h2>
-            <div class="artigos-content">  
-
-                <section>
-                    <div class="artigo-item">
-                        <h3>Desenvolvimento tecnológico e a identidade digital</h3>
-                        <p> A identidade online reflete aspectos pessoais, profissionais e sociais, sendo constantemente moldada por avanços em redes sociais, inteligência artificial e segurança cibernética.</p> 
-                        <a href="../html/artigo_identidade_digital.html" class="btn-primary">Ler</a>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="artigo-item">
-                        <h3>As tecnologias transversais e o futuro do setor produtivo</h3>
-                        <p>As tecnologias transversais, como inteligência artificial, automação e big data, estão transformando o setor produtivo, criando novas oportunidades e desafios.</p> 
-                        <a href="../html/artigo_tecnologia_transversais.html" class="btn-primary">Ler</a>
-                    </div>
-                </section>
-              
-            </div>
+            <h2 id="artigos-title">Nossos <span>Artigos</span></h2>
+            <!-- Seção de Tecnologia -->
+            <section id="categoria-tecnologia">
+                <div class="artigos-grid" id="tecnologia-container">
+                <!-- Os artigos da categoria Tecnologia serão carregados aqui -->
+                </div>
+            </section>
         </div>
     </section>
 
@@ -61,16 +75,27 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 LetrasVivas. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="/politica-de-privacidade" aria-label="Política de Privacidade">Política de Privacidade</a>
+                <a href="/termos-de-uso" aria-label="Termos de Uso">Termos de Uso</a>
+            </div>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/letsvivas" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/letsvivas" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Página do Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/letsvivas" aria-label="Página do Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/letsvivas" aria-label="Página do Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="../js/script.js"></script>
+    <script src="../js/script-carregar-artigos.js"></script>
+    <script src="../js/script-dark-mode.js"></script>
 </body>
 
 </html>

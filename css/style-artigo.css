@@ -108,3 +108,60 @@ body, html {
         padding: 10px;
     }
 }
+
+/* Estilo padrão para transições */
+.section {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Remove transições durante o scroll */
+.sections.scrolling .section {
+    transition: none;
+}
+
+/* Modo Escuro */
+.dark-mode body {
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Cor do texto principal */
+}
+
+.dark-mode .container-article {
+    border-bottom: 1px solid #333; /* Linha divisória mais clara no modo escuro */
+}
+
+.dark-mode .progress-container {
+    background: #333; /* Fundo da barra de progresso mais escuro */
+}
+
+.dark-mode .progress-bar {
+    background: linear-gradient(to right, #bb86fc, #cf6679); /* Cores ajustadas para o modo escuro */
+}
+
+.dark-mode .section {
+    border-bottom: 1px solid #333; /* Linha divisória mais clara no modo escuro */
+}
+
+.dark-mode .section h2 {
+    color: #bb86fc; /* Título em roxo claro */
+}
+
+.dark-mode .section p {
+    color: #b0b0b0; /* Parágrafos em cinza claro */
+}
+
+.dark-mode .section a {
+    color: #cf6679; /* Links em rosa */
+}
+
+.dark-mode .section a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Rosa mais vibrante ao passar o mouse */
+}
+
+.dark-mode #scroll-down-arrow {
+    background: #bb86fc; /* Botão de avançar em roxo claro */
+}
+
+.dark-mode #scroll-down-arrow:hover {
+    background: #9a67db; /* Roxo mais escuro ao passar o mouse */
+}

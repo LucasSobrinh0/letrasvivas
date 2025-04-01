@@ -4,11 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experimento de Milgram - LetrasVivas</title>
+    <meta name="description" content="Entenda as consequências psicológicas do stalking nas redes sociais e como ele afeta tanto quem pratica quanto quem é alvo desse comportamento invasivo.">
+    <meta name="keywords" content="stalking digital, saúde mental, redes sociais, ansiedade, depressão, privacidade online">
+    <meta name="author" content="">
+     <!-- Open Graph Tags -->
+     <meta property="og:title" content="">
+     <meta property="og:description" content="">
+     <meta property="og:image" content="">
+     <meta property="og:url" content="">
+     <meta property="og:type" content="">
+     <!-- Twitter Card Tags -->
+     <meta name="twitter:card" content="">
+     <meta name="twitter:title" content="">
+     <meta name="twitter:description" content="">
+     <meta name="twitter:image" content="">
+
+    <title> LetrasVivas | Consequências Psicológicas do Stalking </title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-artigo.css">
@@ -16,17 +35,25 @@
 
 <body>
     <!-- Navegação -->
-    <nav>
+    <nav aria-label="Navegação Principal">
         <div class="container">
-            <a href="../html/index.html" class="logo">Letras<span>Vivas</span></a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-            <ul class="menu">
-                <li><a href="../html/index.html#inicio">Início</a></li>
-                <li><a href="../html/index.html#sobre">Sobre</a></li>
-                <li><a href="../html/index.html#recursos">Recursos</a></li>
-                <li><a href="../html/index.html#depoimentos">Depoimentos</a></li>
-                <li><a href="../html/index.html#contato">Contato</a></li>
+            <a href="../html/index.html" class="logo" aria-label="Página inicial do LetrasVivas">
+                Letras<span>Vivas</span>
+            </a>
+
+            <!-- Botão de Menu Responsivo -->
+            <input type="checkbox" id="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <ul class="menu" role="menu">
+                <li><a href="../html/index.html#inicio" role="menuitem">Início</a></li>
+                <li><a href="../html/index.html#sobre" role="menuitem">Sobre</a></li>
+                <li><a href="../html/index.html#recursos" role="menuitem">Recursos</a></li>
+                <li><a href="../html/index.html#depoimentos" role="menuitem">Depoimentos</a></li>
+                <li><a href="../html/index.html#contato" role="menuitem">Contato</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </div>
     </nav>
@@ -34,70 +61,76 @@
     <!-- Conteúdo do Artigo -->
     <div class="container-article">
         <!-- Barra de Progresso -->
-        <div class="progress-container">
+        <div class="progress-container" aria-hidden="true">
             <div class="progress-bar" id="progress-bar"></div>
         </div>
 
         <!-- Seções do Texto -->
-        <div class="sections">
-            <section id="section1" class="section">
-                <h2>Introdução</h2>
-                <p>Nas últimas décadas, com o avanço das tecnologias e a popularização das redes sociais, surgiram novos comportamentos que afetam diretamente a saúde mental das pessoas. </p>
+        <div class="sections" role="article">
+            <section id="section1" class="section" aria-labelledby="section1-title">
+                <h2 id="section1-title">Introdução</h2>
+                <p>Nas últimas décadas, com o avanço das tecnologias e a popularização das redes sociais, surgiram novos comportamentos que afetam diretamente a saúde mental das pessoas.</p>
             </section>
-            <section id="section2" class="section">
+            <section id="section2" class="section" aria-labelledby="section2-title">
                 <p>Um desses comportamentos é o stalking digital, que se refere à prática de seguir, monitorar ou investigar a vida de outra pessoa de forma obsessiva e invasiva, por meio das plataformas digitais.</p>
             </section>
-            <section id="section3" class="section">
+            <section id="section3" class="section" aria-labelledby="section3-title">
                 <p>Embora o termo “stalkear” tenha uma conotação negativa, muitas vezes é confundido com simples curiosidade, mas seus efeitos psicológicos podem ser profundos e prejudiciais, tanto para quem realiza quanto para quem é alvo desse comportamento.</p>
             </section>
-            <section id="section4" class="section">
-                <h2>Consequências Psicológicas para a Pessoa Alvo do Stalking</h2>
-                <p>Embora a pessoa que pratica o stalking esteja diretamente afetada, quem é alvo desse comportamento também sofre consequências psicológicas. </p>
+            <section id="section4" class="section" aria-labelledby="section4-title">
+                <h2 id="section4-title">Consequências Psicológicas para a Pessoa Alvo do Stalking</h2>
+                <p>Embora a pessoa que pratica o stalking esteja diretamente afetada, quem é alvo desse comportamento também sofre consequências psicológicas.</p>
             </section>
-            <section id="section5" class="section">
+            <section id="section5" class="section" aria-labelledby="section5-title">
                 <p>Muitas vezes, a pessoa alvo do stalking pode se sentir violada em sua privacidade, o que gera sentimentos de medo, insegurança e ansiedade.</p>
             </section>
-            <section id="section6" class="section">
+            <section id="section6" class="section" aria-labelledby="section6-title">
                 <p>Isso pode comprometer a confiança em outros indivíduos, dificultando o estabelecimento de novas relações sociais e afetivas.</p>
             </section>
-            <section id="section7" class="section">
-                <p>O constante monitoramento da vida de uma pessoa por outra pode levar a uma sensação de falta de controle sobre sua própria existência, gerando uma sensação de impotência. </p>
+            <section id="section7" class="section" aria-labelledby="section7-title">
+                <p>O constante monitoramento da vida de uma pessoa por outra pode levar a uma sensação de falta de controle sobre sua própria existência, gerando uma sensação de impotência.</p>
             </section>
-            <section id="section8" class="section">
+            <section id="section8" class="section" aria-labelledby="section8-title">
                 <p>Esse tipo de violação da privacidade pode impactar a saúde mental de maneira significativa, levando a distúrbios como transtornos de ansiedade, insônia e, em casos mais graves, até depressão. Em situações extremas, o stalking pode evoluir para um nível de assédio moral, o que pode afetar ainda mais a qualidade de vida da pessoa alvo.</p>
             </section>
-            <section id="section9" class="section">
-                <h2>A Impacto na Sociedade e nas Relações Pessoais</h2>
+            <section id="section9" class="section" aria-labelledby="section9-title">
+                <h2 id="section9-title">A Impacto na Sociedade e nas Relações Pessoais</h2>
                 <p>O stalking digital reflete uma questão maior da sociedade moderna: a busca incessante por validação e conexão, muitas vezes substituindo o contato humano real por interações superficiais nas redes sociais.</p>
             </section>
-            <section id="section10" class="section">
-                <p>
-                    As consequências desse comportamento não são apenas individuais, mas também coletivas, pois ele pode prejudicar a construção de relações saudáveis e autênticas, tanto no ambiente virtual quanto no físico.
-                </p>
+            <section id="section10" class="section" aria-labelledby="section10-title">
+                <p>As consequências desse comportamento não são apenas individuais, mas também coletivas, pois ele pode prejudicar a construção de relações saudáveis e autênticas, tanto no ambiente virtual quanto no físico.</p>
             </section>
-            <section id="section11" class="section">
-                <h2>Conclusão</h2>
-                <p>O stalking nas redes sociais é um comportamento que pode ter sérias consequências psicológicas para quem o pratica e para quem é alvo. </p>
+            <section id="section11" class="section" aria-labelledby="section11-title">
+                <h2 id="section11-title">Conclusão</h2>
+                <p>O stalking nas redes sociais é um comportamento que pode ter sérias consequências psicológicas para quem o pratica e para quem é alvo.</p>
             </section>
-            <section id="section12" class="section">
+            <section id="section12" class="section" aria-labelledby="section12-title">
                 <p>Com a facilidade de acesso à vida das outras pessoas por meio das plataformas digitais, é importante que todos desenvolvam uma consciência crítica sobre o uso dessas redes e sobre como elas impactam a saúde mental.</p>
             </section>
-            <section id="section13" class="section">
-               <p>Tanto a busca incessante por informações sobre outros quanto a invasão da privacidade de alguém podem gerar distúrbios emocionais significativos. Por isso, é crucial que cada indivíduo aprenda a respeitar os limites e a manter um equilíbrio saudável no consumo e na interação nas redes sociais.</p>
+            <section id="section13" class="section" aria-labelledby="section13-title">
+                <p>Tanto a busca incessante por informações sobre outros quanto a invasão da privacidade de alguém podem gerar distúrbios emocionais significativos. Por isso, é crucial que cada indivíduo aprenda a respeitar os limites e a manter um equilíbrio saudável no consumo e na interação nas redes sociais.</p>
             </section>
-            <section id="section14" class="section">
-                <p>Leia o artigo completo em: <a href="https://br.mundopsicologos.com/artigos/as-consequencias-psicologicas-de-stalkear-nas-redes-sociais" target="_blank"> As consequencias psicologicas de stalker</a></p>
+            <section id="section14" class="section" aria-labelledby="section14-title">
+                <p>Leia o artigo completo em: 
+                    <a href="https://br.mundopsicologos.com/artigos/as-consequencias-psicologicas-de-stalkear-nas-redes-sociais" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Artigo completo sobre as consequências psicológicas de stalkear nas redes sociais no Mundo Psicólogos">
+                        As consequências psicológicas de stalkear
+                    </a>
+                </p>
             </section>
         </div>
 
         <!-- Botão de Avançar -->
-        <div id="scroll-down-arrow">
-            <i class="fas fa-chevron-down"></i>
+        <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </div>
     </div>
 
     <!-- JavaScript -->
     <script src="../js/script-artigos.js"></script>
+    <script src="../js/script-dark-mode.js"></script>
 </body>
 
 </html>

@@ -4,11 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experimento de Milgram - LetrasVivas</title>
+    <meta name="description" content="Explore o impacto das tecnologias transversais no futuro do setor produtivo global e entenda os riscos e oportunidades para o Brasil.">
+    <meta name="keywords" content="tecnologias transversais, inovação tecnológica, futuro da produção, competitividade global">
+    <meta name="author" content="">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+  
+
+
+    <title>LetrasVivas | Tecnologias Transversais</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-artigo.css">
@@ -16,17 +37,25 @@
 
 <body>
     <!-- Navegação -->
-    <nav>
+    <nav aria-label="Navegação Principal">
         <div class="container">
-            <a href="../html/index.html" class="logo">Letras<span>Vivas</span></a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-            <ul class="menu">
-                <li><a href="../html/index.html#inicio">Início</a></li>
-                <li><a href="../html/index.html#sobre">Sobre</a></li>
-                <li><a href="../html/index.html#recursos">Recursos</a></li>
-                <li><a href="../html/index.html#depoimentos">Depoimentos</a></li>
-                <li><a href="../html/index.html#contato">Contato</a></li>
+            <a href="../html/index.html" class="logo" aria-label="Página inicial do LetrasVivas">
+                Letras<span>Vivas</span>
+            </a>
+
+            <!-- Botão de Menu Responsivo -->
+            <input type="checkbox" id="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <ul class="menu" role="menu">
+                <li><a href="../html/index.html#inicio" role="menuitem">Início</a></li>
+                <li><a href="../html/index.html#sobre" role="menuitem">Sobre</a></li>
+                <li><a href="../html/index.html#recursos" role="menuitem">Recursos</a></li>
+                <li><a href="../html/index.html#depoimentos" role="menuitem">Depoimentos</a></li>
+                <li><a href="../html/index.html#contato" role="menuitem">Contato</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </div>
     </nav>
@@ -34,70 +63,75 @@
     <!-- Conteúdo do Artigo -->
     <div class="container-article">
         <!-- Barra de Progresso -->
-        <div class="progress-container">
+        <div class="progress-container" aria-hidden="true">
             <div class="progress-bar" id="progress-bar"></div>
         </div>
 
         <!-- Seções do Texto -->
-        <div class="sections">
-            <section id="section1" class="section">
-                <h2>Introdução</h2>
+        <div class="sections" role="article">
+            <section id="section1" class="section" aria-labelledby="section1-title">
+                <h2 id="section1-title">Introdução</h2>
                 <p>As tecnologias transversais, com seu alto potencial transformador, estão desempenhando um papel crucial no futuro do setor produtivo global.</p>
             </section>
-            <section id="section2" class="section">
-                <p>Elas são aquelas que impactam diversos setores e têm o poder de modificar profundamente os processos de produção, modelos de negócios e formas de concorrência, tornando-se pilares estratégicos para a competitividade econômica e científica das nações. </p>
+            <section id="section2" class="section" aria-labelledby="section2-title">
+                <p>Elas são aquelas que impactam diversos setores e têm o poder de modificar profundamente os processos de produção, modelos de negócios e formas de concorrência, tornando-se pilares estratégicos para a competitividade econômica e científica das nações.</p>
             </section>
-            <section id="section3" class="section">
+            <section id="section3" class="section" aria-labelledby="section3-title">
                 <p>Entre essas tecnologias, destacam-se a inteligência artificial (IA), robótica, biotecnologia, nanotecnologia, optoeletrônica e novos materiais.</p>
             </section>
-            <section id="section4" class="section">
+            <section id="section4" class="section" aria-labelledby="section4-title">
                 <p>Espera-se que, nas próximas décadas, o impacto dessas tecnologias seja crescente, dado o seu papel fundamental em setores como manufatura avançada, saúde, energia e comunicação.</p>
             </section>
-            <section id="section5" class="section">
-                <h2>Riscos e Oportunidades para o Brasil</h2>
+            <section id="section5" class="section" aria-labelledby="section5-title">
+                <h2 id="section5-title">Riscos e Oportunidades para o Brasil</h2>
                 <p>O Brasil corre o risco de se tornar cada vez mais dependente de tecnologias estrangeiras, o que pode afetar sua competitividade no futuro.</p>
             </section>
-            <section id="section6" class="section">
-                <p>A falta de uma estratégia nacional robusta para fomentar a criação de novas empresas de base tecnológica e para modernizar as empresas existentes é um obstáculo significativo. <p>
+            <section id="section6" class="section" aria-labelledby="section6-title">
+                <p>A falta de uma estratégia nacional robusta para fomentar a criação de novas empresas de base tecnológica e para modernizar as empresas existentes é um obstáculo significativo.</p>
             </section>
-            <section id="section7" class="section">
+            <section id="section7" class="section" aria-labelledby="section7-title">
                 <p>Sem um plano claro e investimentos adequados em inovação, o país pode se ver excluído das cadeias globais de valor, dependendo de outras nações para tecnologias essenciais.</p>
             </section>
-            <section id="section8" class="section">
-                <p>Por outro lado, ainda há tempo para reverter esse cenário. As tecnologias transversais, embora disruptivas, terão um impacto gradual em muitos setores industriais. </p>
+            <section id="section8" class="section" aria-labelledby="section8-title">
+                <p>Por outro lado, ainda há tempo para reverter esse cenário. As tecnologias transversais, embora disruptivas, terão um impacto gradual em muitos setores industriais.</p>
             </section>
-            <section id="section9" class="section">
+            <section id="section9" class="section" aria-labelledby="section9-title">
                 <p>O Brasil tem o potencial de acelerar sua evolução tecnológica, especialmente se adotar políticas públicas mais agressivas de CT&I, investindo na formação de um ecossistema de inovação mais robusto.</p>
             </section>
-            <section id="section10" class="section">
-                <p>
-                    Além disso, a colaboração entre universidades, empresas e governo será fundamental para acelerar o processo de adoção dessas tecnologias.
-                </p>
+            <section id="section10" class="section" aria-labelledby="section10-title">
+                <p>Além disso, a colaboração entre universidades, empresas e governo será fundamental para acelerar o processo de adoção dessas tecnologias.</p>
             </section>
-            <section id="section11" class="section">
-                <h2>Conclusão</h2>
+            <section id="section11" class="section" aria-labelledby="section11-title">
+                <h2 id="section11-title">Conclusão</h2>
                 <p>O futuro do setor produtivo global será moldado pela adoção e integração das tecnologias transversais. Países como os Estados Unidos e a China estão claramente à frente, com investimentos maciços em pesquisa e desenvolvimento e na criação de políticas públicas voltadas para a inovação tecnológica.</p>
             </section>
-            <section id="section12" class="section">
-                <p>Para o Brasil, é crucial adotar uma postura mais proativa e investir em tecnologias emergentes, se quiser garantir sua competitividade no futuro.
-                </p>
+            <section id="section12" class="section" aria-labelledby="section12-title">
+                <p>Para o Brasil, é crucial adotar uma postura mais proativa e investir em tecnologias emergentes, se quiser garantir sua competitividade no futuro.</p>
             </section>
-            <section id="section13" class="section">
+            <section id="section13" class="section" aria-labelledby="section13-title">
                 <p>O país deve buscar uma abordagem mais integrada e estratégica, fortalecendo sua infraestrutura científica e tecnológica, criando novas oportunidades para o setor privado e estimulando a formação de mão de obra altamente qualificada.</p>
             </section>
-            <section id="section14" class="section">
-                <p>Leia o artigo completo em: <a href="https://www.ipea.gov.br/cts/pt/central-de-conteudo/artigos/artigos/353-as-tecnologias-transversais-e-o-futuro-do-setor-produtivo" target="_blank">tecnologia transversais</a></p>
+            <section id="section14" class="section" aria-labelledby="section14-title">
+                <p>Leia o artigo completo em: 
+                    <a href="https://www.ipea.gov.br/cts/pt/central-de-conteudo/artigos/artigos/353-as-tecnologias-transversais-e-o-futuro-do-setor-produtivo" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Artigo completo sobre tecnologias transversais e o futuro do setor produtivo no IPEA">
+                        Tecnologias Transversais
+                    </a>
+                </p>
             </section>
         </div>
 
         <!-- Botão de Avançar -->
-        <div id="scroll-down-arrow">
-            <i class="fas fa-chevron-down"></i>
+        <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </div>
     </div>
 
     <!-- JavaScript -->
     <script src="../js/script-artigos.js"></script>
+    <script src="../js/script-dark-mode.js"></script>
 </body>
 
 </html>

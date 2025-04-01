@@ -4,11 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ler Artigos - LetrasVivas</title>
+    <meta name="description" content="Explore artigos sobre psicologia no LetrasVivas. Aprenda sobre a experiência de Milgram e as consequências psicológicas de stalkear nas redes sociais.">
+    <meta name="keywords" content="artigos psicologia, psicologia comportamental, stalkear redes sociais, experiência de Milgram, aprendizado online">
+    <meta name="author" content="">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    
+    <title>Ler Artigos - LetrasVivas | Psicologia</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-artigos.css">
@@ -16,45 +36,39 @@
 
 <body>
     <!-- Navegação -->
-    <nav>
+    <nav aria-label="Navegação Principal">
         <div class="container">
-            <a href="../html/index.html" class="logo">Letras<span>Vivas</span></a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-            <ul class="menu">
-                <li><a href="../html/index.html#inicio">Início</a></li>
-                <li><a href="../html/index.html#sobre">Sobre</a></li>
-                <li><a href="../html/index.html#recursos">Recursos</a></li>
-                <li><a href="../html/index.html#depoimentos">Depoimentos</a></li>
-                <li><a href="../html/index.html#contato">Contato</a></li>
+            <a href="../html/index.html" class="logo" aria-label="Página inicial do LetrasVivas">
+                Letras<span>Vivas</span>
+            </a>
+
+            <!-- Botão de Menu Responsivo -->
+            <input type="checkbox" id="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <ul class="menu" role="menu">
+                <li><a href="../html/index.html#inicio" role="menuitem">Início</a></li>
+                <li><a href="../html/index.html#sobre" role="menuitem">Sobre</a></li>
+                <li><a href="../html/index.html#recursos" role="menuitem">Recursos</a></li>
+                <li><a href="../html/index.html#depoimentos" role="menuitem">Depoimentos</a></li>
+                <li><a href="../html/index.html#contato" role="menuitem">Contato</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </div>
     </nav>
 
     <!-- Seção de Artigos -->
-    <section id="artigos">
+    <section id="artigos" aria-labelledby="artigos-title">
         <div class="container">
-            <h2>Nossos <span>Artigos</span></h2>
-            <div class="artigos-content">  
-
-                <section>
-                    <div class="artigo-item">
-                        <h3>Experiência de Milgram</h3>
-                        <p>Revelando a tendência à obediência: como 65% dos participantes do experimento de Milgram aplicaram 450 volts em pessoas desconhecidas.</p>
-                        <a href="../html/artigo_experiencia_de_milgram.html" class="btn-primary">Ler</a>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="artigo-item">
-                        <h3>As consequências psicológicas de stalkear nas redes sociais</h3>
-                        <p>Stalkear nas redes sociais pode gerar sentimentos de ansiedade, insegurança e baixa autoestima, tanto para quem realiza a vigilância quanto para a pessoa observada.</p>
-                        <a href="../html/artigo_psicologia_stalker.html" class="btn-primary">Ler</a>
-                    </div>
-                </section>
-              
-              
-            </div>
+            <h2 id="artigos-title">Nossos <span>Artigos</span></h2>
+            <!-- Seção de Psicologia -->
+            <section id="categoria-psicologia">
+                <div class="artigos-grid" id="psicologia-container">
+                <!-- Os artigos da categoria Psicologia serão carregados aqui -->
+                </div>
+            </section>
         </div>
     </section>
 
@@ -62,16 +76,27 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 LetrasVivas. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="/politica-de-privacidade" aria-label="Política de Privacidade">Política de Privacidade</a>
+                <a href="/termos-de-uso" aria-label="Termos de Uso">Termos de Uso</a>
+            </div>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/letsvivas" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/letsvivas" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Página do Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/letsvivas" aria-label="Página do Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/letsvivas" aria-label="Página do Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="../js/script.js"></script>
+    <script src="../js/script-carregar-artigos.js"></script>
+    <script src="../js/script-dark-mode.js"></script>
 </body>
 
 </html>
