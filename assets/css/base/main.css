@@ -1,0 +1,337 @@
+:root {
+    --primary-color: #0072f5;
+    --secondary-color: #ff6f61;
+    --light-bg: #f9f9f9;
+    --dark-bg: #121212;
+    --text-dark: #333;
+    --text-light: #f5f5f5;
+    --card-bg: #f1f1f1;
+    --dark-card-bg: #2c2c2c;
+    --white: #ffffff;
+    --black: #000000;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+}
+
+body {
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ==================== NAVEGAÇÃO ==================== */
+nav {
+    background-color: var(--light-bg);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav .logo span {
+    color: var(--secondary-color);
+}
+
+.nav-item a:hover {
+    color: var(--primary-color);
+}
+
+.navbar-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* ==================== CABEÇALHO PRINCIPAL ==================== */
+header {
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 5%;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown var(--transition-speed) ease-in-out;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.header-content a {
+    margin-top: 10px;
+}
+
+/* ==================== BOTÕES ==================== */
+.btn-primary,
+.btn-secondary {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--transition-speed);
+    margin-top: 20px;
+    color: var(--white);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+}
+
+/* ==================== SOBRE ==================== */
+#sobre {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-text {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.sobre-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.sobre-text h2 span {
+    color: var(--secondary-color);
+}
+
+.sobre-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ==================== RECURSOS ==================== */
+#recursos {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+#recursos h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+#recursos h2 span {
+    color: var(--secondary-color);
+}
+
+.recurso-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 15px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    transition: transform var(--transition-speed);
+}
+
+.recurso-item:hover {
+    transform: translateY(-10px);
+}
+
+.recurso-item i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.recurso-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.recurso-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==================== DEPOIMENTOS ==================== */
+#depoimentos {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+#depoimentos h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+#depoimentos h2 span {
+    color: var(--secondary-color);
+}
+
+.depoimento-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 15px;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    position: relative;
+    transition: transform var(--transition-speed);
+}
+
+.depoimento-item::before {
+    content: "“";
+    font-size: 4rem;
+    color: var(--secondary-color);
+    position: absolute;
+    top: -20px;
+    left: 20px;
+}
+
+.depoimento-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.depoimento-item h5 {
+    color: var(--primary-color);
+}
+
+.depoimento-item:hover {
+    transform: translateY(-10px);
+}
+
+/* ==================== CONTATO ==================== */
+#contato {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#contato h2 span {
+    color: var(--secondary-color);
+}
+
+#contato p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contato-item {
+    margin: 20px;
+    font-size: 1.2rem;
+}
+
+.contato-item i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.contato-item a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.contato-item a:hover {
+    color: var(--primary-color);
+}
+
+.icone {
+    color: var(--secondary-color);
+}
+
+/* ==================== RODAPÉ ==================== */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-left: 4%;
+    margin-top: 1%;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.4rem;
+    transition: color var(--transition-speed);
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
