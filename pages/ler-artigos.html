@@ -46,13 +46,15 @@
   </nav>
 
   <main id="categoriaApp" class="container my-5 pt-5">
-    <h2 class="text-center mb-5" id="artigos-title">Nossos <span>Artigos</span></h2>
-    <div class="row justify-content-center g-4">
-      <div v-for="artigo in artigos" :key="artigo.id" class="col-md-6 col-lg-4">
-        <div class="artigo-item">
-          <h3 :class="{ 'text-center': true, 'mb-5': true }">{{ artigo.titulo }}</h3>
-          <p>{{ artigo.descricao }}</p>
-          <a :href="artigo.link" class="btn-primary" :aria-label="`Saiba mais sobre ${artigo.titulo}`">Saiba Mais</a>
+    <div id="artigos" class="container my-5 pt-5">
+      <h2 class="text-center mb-5" id="artigos-title">Nossos <span>Artigos</span></h2>
+      <div class="row justify-content-center g-4">
+        <div v-for="artigo in artigos" :key="artigo.id" class="col-md-6 col-lg-4">
+          <div class="artigo-item">
+            <h3 :class="{ 'text-center': true, 'mb-5': true }">{{ artigo.titulo }}</h3>
+            <p>{{ artigo.descricao }}</p>
+            <a :href="artigo.link" class="btn-primary" :aria-label="`Saiba mais sobre ${artigo.titulo}`">Saiba Mais</a>
+          </div>
         </div>
       </div>
     </div>

@@ -49,69 +49,77 @@
 
     <!-- Conteúdo do Artigo -->
     <div class="container-article">
-        <!-- Barra de Progresso -->
-        <div class="progress-container" aria-hidden="true">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
 
+        <div id="progress-app">
+            <!-- Barra de Progresso controlada por Vue -->
+            <div class="progress-container" aria-hidden="true">
+                <div class="progress-bar" :style="{ width: progress + '%' }"></div>
+            </div>
+        
+            <!-- Botão de Avançar controlado por Vue -->
+            <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção" @click="scrollToNextSection">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        
         <!-- Seções do Texto -->
         <div class="sections" role="article">
             <section id="section1" class="section" aria-labelledby="section1-title">
                 <h2 id="section1-title">Introdução</h2>
-                <p>O desenvolvimento tecnológico tem promovido profundas transformações nas sociedades e economias, com impacto direto na construção da identidade digital.</p>
+                <p>O desenvolvimento tecnológico redefine não apenas as economias, mas também as formas como indivíduos constroem e gerenciam sua identidade digital. Essa transformação envolve tanto oportunidades quanto desafios, impactando direitos, privacidade e o papel das grandes corporações tecnológicas.</p>
             </section>
-
+            
             <section id="section2" class="section" aria-labelledby="section2-title">
-                <p>O conceito de "destruição criadora", desenvolvido pelo economista Joseph Schumpeter, descreve como inovações disruptivas substituem tecnologias antigas e reconfiguram estruturas de poder e mercados.</p>
+                <p>Inspirado na teoria da "destruição criadora" de Schumpeter, observa-se que novas tecnologias substituem antigas infraestruturas, criando novos mercados digitais e redistribuindo poder entre empresas e Estados.</p>
             </section>
-
+            
             <section id="section3" class="section" aria-labelledby="section3-title">
-                <p>No contexto contemporâneo, as infraestruturas essenciais não são mais físicas, mas digitais, com a tecnologia desempenhando um papel fundamental na governança e na gestão da identidade.</p>
+                <p>No mundo atual, a infraestrutura digital — como redes de dados e sistemas de autenticação — tornou-se tão essencial quanto a infraestrutura física, posicionando a identidade digital como um recurso estratégico de governança.</p>
             </section>
-
+            
             <section id="section4" class="section" aria-labelledby="section4-title">
                 <h2 id="section4-title">A Evolução da Identidade Digital</h2>
-                <p>Desde os anos 1990, com o surgimento de sistemas como o Microsoft Passport e a Google Account, a gestão da identidade digital tem sido um desafio crescente.</p>
+                <p>Desde as primeiras iniciativas de login único, como Microsoft Passport e Google Account, a identidade digital evoluiu de uma simples ferramenta de acesso para um mecanismo complexo de controle e rastreamento de dados pessoais.</p>
             </section>
-
+            
             <section id="section5" class="section" aria-labelledby="section5-title">
-                <p>A digitalização da vida cotidiana levou ao desenvolvimento de sistemas sofisticados de autenticação e acesso a serviços online, como o Apple ID, Facebook Login e Google Sign-In.</p>
+                <p>Hoje, sistemas como Apple ID, Facebook Login e Google Sign-In facilitam o acesso, mas também aprofundam a dependência dos usuários em plataformas privadas, concentrando a gestão da identidade em poucas empresas.</p>
             </section>
-
+            
             <section id="section6" class="section" aria-labelledby="section6-title">
-                <p>No entanto, essa centralização da identidade nas mãos das grandes empresas de tecnologia gerou preocupações sobre privacidade e vigilância.</p>
+                <p>Essa centralização levanta preocupações sobre a privacidade, vigilância e uso indevido de dados, ao mesmo tempo em que aumenta o poder político e econômico das chamadas "big techs".</p>
             </section>
-
+            
             <section id="section7" class="section" aria-labelledby="section7-title">
-                <p>Essas "big techs" não apenas oferecem conveniência, mas também concentram vastos volumes de dados pessoais, influenciando mercados e estruturas de poder.</p>
+                <p>As grandes empresas de tecnologia detêm informações valiosas que influenciam decisões de mercado e políticas públicas, tornando-se atores centrais na disputa por controle da infraestrutura digital global.</p>
             </section>
-
+            
             <section id="section8" class="section" aria-labelledby="section8-title">
                 <h2 id="section8-title">Iniciativas Governamentais e a Identidade Digital</h2>
-                <p>Governos ao redor do mundo começaram a desenvolver seus próprios sistemas de identidade digital para garantir segurança e eficiência, longe da concentração de dados nas mãos de corporações privadas.</p>
+                <p>Governos buscam alternativas para reduzir a dependência das big techs, implementando sistemas próprios de identidade digital que priorizem a segurança, soberania e autonomia sobre os dados dos cidadãos.</p>
             </section>
-
+            
             <section id="section9" class="section" aria-labelledby="section9-title">
-                <p>A Estônia foi pioneira em 2001, lançando o e-Residency e o ID-kaart, sistemas nacionais obrigatórios de identidade digital.</p>
+                <p>Um exemplo pioneiro é a Estônia, que, desde 2001, adota o e-Residency e o ID-kaart, conferindo aos cidadãos acesso digital seguro a serviços públicos e privados.</p>
             </section>
-
+            
             <section id="section10" class="section" aria-labelledby="section10-title">
-                <p>No Brasil, o governo tem implementado a Carteira de Identidade Nacional (CIN), com o objetivo de unificar os registros e aumentar a eficiência administrativa, combater fraudes e promover inclusão digital.</p>
+                <p>O Brasil avança com a Carteira de Identidade Nacional (CIN), buscando integrar registros, reduzir fraudes, melhorar serviços e promover a inclusão digital, alinhando-se às tendências globais de governança digital.</p>
             </section>
-
+            
             <section id="section11" class="section" aria-labelledby="section11-title">
                 <h2 id="section11-title">Conclusão</h2>
-                <p>O desenvolvimento da identidade digital representa uma infraestrutura pública fundamental no contexto da economia digital, e sua implementação está gerando uma disputa entre grandes empresas de tecnologia e governos.</p>
+                <p>A identidade digital surge como um pilar da infraestrutura pública na era digital, em meio a tensões entre governos e grandes corporações pela regulação e controle das informações pessoais.</p>
             </section>
-
+            
             <section id="section12" class="section" aria-labelledby="section12-title">
-                <p>Como no passado, em que inovações tecnológicas redefiniram paradigmas sociais, a digitalização e as tecnologias de identidade estão moldando um novo ciclo de transformação.</p>
+                <p>Assim como inovações anteriores transformaram paradigmas sociais, a digitalização da identidade redefine relações de poder e obriga os Estados a atualizar suas políticas para proteger os direitos dos cidadãos.</p>
             </section>
-
+            
             <section id="section13" class="section" aria-labelledby="section13-title">
-                <p>A capacidade dos governos de regular essas inovações, garantir a privacidade dos cidadãos e evitar a captura dessas infraestruturas por interesses privados será essencial para determinar o sucesso dessas iniciativas e seus impactos sociais e econômicos.</p>
+                <p>O sucesso dessas iniciativas depende da capacidade de regular tecnologias emergentes, garantir a privacidade e evitar o domínio corporativo sobre sistemas essenciais à cidadania digital.</p>
             </section>
-
+            
             <section id="section14" class="section" aria-labelledby="section14-title">
                 <p>Leia o artigo completo em: 
                     <a href="https://www.ipea.gov.br/cts/pt/central-de-conteudo/artigos/artigos/469-desenvolvimento-tecnologico-e-a-identidade-digital" 
@@ -121,12 +129,7 @@
                         Desenvolvimento tecnológico e a identidade digital
                     </a>
                 </p>
-            </section>
-        </div>
-
-        <!-- Botão de Avançar -->
-        <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção">
-            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </section>            
         </div>
     </div>
 
@@ -136,6 +139,6 @@
     <!-- Scripts personalizados -->
     <script src="../assets/js/components/modo-escuro.js" defer></script>
     <script src="../assets/js/components/navegacao.js" defer></script>
-    <script src="../assets/js/utils/artigos.js" defer></script>
+    <script src="../assets/js/utils/barra-de-progresso.js" defer></script>
 </body>
 </html>

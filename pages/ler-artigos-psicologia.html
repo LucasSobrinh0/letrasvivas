@@ -65,6 +65,12 @@
                                 <i :class="isSaved(artigo.id) ? 'fas fa-bookmark' : 'far fa-bookmark'"></i> Salvar
                             </button>
                         </div>
+                        <!-- ⭐⭐ EXIBIR A AVALIAÇÃO AQUI ⭐⭐ -->
+                        <div class="avaliacao mt-2">
+                            <span>Avaliação:</span>
+                            <span v-for="n in getRating(artigo.id)" :key="n" class="text-warning"><i class="fas fa-star"></i></span>
+                            <span v-for="n in (5 - getRating(artigo.id))" :key="'vazio'+n" class="text-secondary"><i class="far fa-star"></i></span>
+                        </div>  
                     </div>
                 </div>
             </div>

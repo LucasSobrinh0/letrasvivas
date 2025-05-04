@@ -1,113 +1,112 @@
 /* ==================== VARIÁVEIS ==================== */
 :root {
-    --primary-color: #0072f5;
-    --primary-hover: #005bb5;
-    --secondary-color: #ff6f61;
-    --bg-light: #f1f1f1;
-    --border-light: #e0e0e0;
-    --text-color: #333;
-    --transition-speed: 0.5s;
-  }
-  
-  /* ==================== LAYOUT PRINCIPAL ==================== */
-  .container-article {
-    margin-top: 80px; /* Ajuste para caber a barra de navegação */
-    position: relative;
-    height: calc(100vh - 80px); /* Altura total menos a navegação */
-  }
-  
-  /* ==================== BARRA DE PROGRESSO ==================== */
-  .progress-container {
-    position: fixed;
-    top: 59px; /* Abaixo da navbar */
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--bg-light);
-    z-index: 999;
-  }
-  
-  .progress-bar {
-    height: 5px;
-    width: 0%;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  }
-  
-  /* ==================== SEÇÕES ==================== */
-  .sections {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100%;
-    position: relative;
-  }
-  
-  .section {
-    scroll-snap-align: start;
-    min-height: 100%;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    border-bottom: 1px solid var(--border-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: opacity var(--transition-speed) ease-in-out;
-  }
-  
-  .section h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    text-align: center;
-  }
-  
-  .section a {
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
-  
-  .section a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ==================== SCROLL TRANSITION ==================== */
-  .sections.scrolling .section {
-    transition: none;
-  }
-  
-  /* ==================== BOTÃO DE AVANÇAR ==================== */
-  #scroll-down-arrow {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    cursor: pointer;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 15px;
-    border-radius: 50%;
-    animation: bounce 2s infinite;
-  }
-  
-  #scroll-down-arrow:hover {
-    background: var(--primary-hover);
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-  }
-  
-  /* ==================== RESPONSIVIDADE ==================== */
-  @media (max-width: 768px) {
-    .section h2 { font-size: 1.5rem; }
-    .section p { font-size: 1rem; }
-    #scroll-down-arrow { padding: 10px; }
-  }
-  
+  --primary-color: #0072f5;
+  --primary-hover: #005bb5;
+  --secondary-color: #ff6f61;
+  --bg-light: #f1f1f1;
+  --border-light: #e0e0e0;
+  --text-color: #333;
+  --transition-speed: 0.5s;
+}
+
+/* ==================== LAYOUT PRINCIPAL ==================== */
+.container-article {
+  margin-top: 80px; /* Ajuste para caber a barra de navegação */
+  position: relative;
+  height: calc(100vh - 80px); /* Altura total menos a navegação */
+}
+
+/* ==================== BARRA DE PROGRESSO ==================== */
+.progress-container {
+  position: fixed;
+  top: 59px; /* Abaixo da navbar */
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--bg-light);
+  z-index: 999;
+}
+
+.progress-bar {
+  height: 5px;
+  width: 0%;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+/* ==================== SEÇÕES ==================== */
+.sections {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100%;
+  position: relative;
+}
+
+.section {
+  scroll-snap-align: start;
+  min-height: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity var(--transition-speed) ease-in-out;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.section a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== SCROLL TRANSITION ==================== */
+.sections.scrolling .section {
+  transition: none;
+}
+
+/* ==================== BOTÃO DE AVANÇAR ==================== */
+#scroll-down-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
+#scroll-down-arrow:hover {
+  background: var(--primary-hover);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+  .section h2 { font-size: 1.5rem; }
+  .section p { font-size: 1rem; }
+  #scroll-down-arrow { padding: 10px; }
+}

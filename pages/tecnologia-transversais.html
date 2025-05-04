@@ -47,83 +47,86 @@
     </nav>
 
     <div class="container-article">
-        <!-- Barra de Progresso -->
-        <div class="progress-container" aria-hidden="true">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
 
+        <div id="progress-app">
+            <!-- Barra de Progresso controlada por Vue -->
+            <div class="progress-container" aria-hidden="true">
+                <div class="progress-bar" :style="{ width: progress + '%' }"></div>
+            </div>
+        
+            <!-- Botão de Avançar controlado por Vue -->
+            <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção" @click="scrollToNextSection">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        
         <!-- Seções do Texto -->
         <div class="sections" role="article">
             <section id="section1" class="section" aria-labelledby="section1-title">
                 <h2 id="section1-title">Introdução</h2>
-                <p>As tecnologias transversais, com seu alto potencial transformador, estão desempenhando um papel crucial no futuro do setor produtivo global.</p>
-            </section>
-
-            <section id="section2" class="section" aria-labelledby="section2-title">
-                <p>Elas são aquelas que impactam diversos setores e têm o poder de modificar profundamente os processos de produção, modelos de negócios e formas de concorrência, tornando-se pilares estratégicos para a competitividade econômica e científica das nações.</p>
-            </section>
-
-            <section id="section3" class="section" aria-labelledby="section3-title">
-                <p>Entre essas tecnologias, destacam-se a inteligência artificial (IA), robótica, biotecnologia, nanotecnologia, optoeletrônica e novos materiais.</p>
-            </section>
-
-            <section id="section4" class="section" aria-labelledby="section4-title">
-                <p>Espera-se que, nas próximas décadas, o impacto dessas tecnologias seja crescente, dado o seu papel fundamental em setores como manufatura avançada, saúde, energia e comunicação.</p>
-            </section>
-            
-            <section id="section5" class="section" aria-labelledby="section5-title">
+                <p>As tecnologias transversais, como inteligência artificial, robótica e biotecnologia, estão redefinindo o setor produtivo global. Elas transcendem setores específicos, promovendo inovações que impactam diversos segmentos da economia.</p>
+              </section>
+              
+              <section id="section2" class="section" aria-labelledby="section2-title">
+                <p>Essas tecnologias têm o potencial de transformar processos produtivos, modelos de negócios e formas de concorrência. Sua aplicação ampla torna-se estratégica para a competitividade econômica e científica das nações.</p>
+              </section>
+              
+              <section id="section3" class="section" aria-labelledby="section3-title">
+                <p>Destacam-se tecnologias como inteligência artificial, robótica, biotecnologia, nanotecnologia, optoeletrônica e novos materiais. Elas são fundamentais para a inovação e o avanço de múltiplos setores industriais.</p>
+              </section>
+              
+              <section id="section4" class="section" aria-labelledby="section4-title">
+                <p>O impacto dessas tecnologias tende a crescer nas próximas décadas, influenciando áreas como manufatura avançada, saúde, energia e comunicação, e moldando o futuro do setor produtivo.</p>
+              </section>
+              
+              <section id="section5" class="section" aria-labelledby="section5-title">
                 <h2 id="section5-title">Riscos e Oportunidades para o Brasil</h2>
-                <p>O Brasil corre o risco de se tornar cada vez mais dependente de tecnologias estrangeiras, o que pode afetar sua competitividade no futuro.</p>
-            </section>
-
-            <section id="section6" class="section" aria-labelledby="section6-title">
-                <p>A falta de uma estratégia nacional robusta para fomentar a criação de novas empresas de base tecnológica e para modernizar as empresas existentes é um obstáculo significativo.</p>
-            </section>
-            
-            <section id="section7" class="section" aria-labelledby="section7-title">
-                <p>Sem um plano claro e investimentos adequados em inovação, o país pode se ver excluído das cadeias globais de valor, dependendo de outras nações para tecnologias essenciais.</p>
-            </section>
-
-            <section id="section8" class="section" aria-labelledby="section8-title">
-                <p>Por outro lado, ainda há tempo para reverter esse cenário. As tecnologias transversais, embora disruptivas, terão um impacto gradual em muitos setores industriais.</p>
-            </section>
-            
-            <section id="section9" class="section" aria-labelledby="section9-title">
-                <p>O Brasil tem o potencial de acelerar sua evolução tecnológica, especialmente se adotar políticas públicas mais agressivas de CT&I, investindo na formação de um ecossistema de inovação mais robusto.</p>
-            </section>
-
-            <section id="section10" class="section" aria-labelledby="section10-title">
-                <p>Além disso, a colaboração entre universidades, empresas e governo será fundamental para acelerar o processo de adoção dessas tecnologias.</p>
-            </section>
-
-            <section id="section11" class="section" aria-labelledby="section11-title">
+                <p>O Brasil enfrenta o risco de aumentar sua dependência de tecnologias estrangeiras, o que pode comprometer sua competitividade futura. A ausência de uma estratégia nacional robusta para fomentar a inovação tecnológica é um desafio significativo.</p>
+              </section>
+              
+              <section id="section6" class="section" aria-labelledby="section6-title">
+                <p>A falta de políticas públicas eficazes para estimular a criação de empresas de base tecnológica e modernizar as existentes impede o avanço do país no cenário tecnológico global.</p>
+              </section>
+              
+              <section id="section7" class="section" aria-labelledby="section7-title">
+                <p>Sem investimentos adequados em inovação e uma estratégia clara, o Brasil corre o risco de ser excluído das cadeias globais de valor, tornando-se dependente de outras nações para tecnologias essenciais.</p>
+              </section>
+              
+              <section id="section8" class="section" aria-labelledby="section8-title">
+                <p>No entanto, ainda há tempo para reverter esse cenário. As tecnologias transversais, apesar de disruptivas, terão um impacto gradual, oferecendo ao Brasil a oportunidade de se preparar e adaptar.</p>
+              </section>
+              
+              <section id="section9" class="section" aria-labelledby="section9-title">
+                <p>Com políticas públicas mais agressivas em ciência, tecnologia e inovação (CT&I), o Brasil pode acelerar sua evolução tecnológica, fortalecendo seu ecossistema de inovação.</p>
+              </section>
+              
+              <section id="section10" class="section" aria-labelledby="section10-title">
+                <p>A colaboração entre universidades, empresas e governo é essencial para impulsionar a adoção dessas tecnologias e promover o desenvolvimento sustentável do setor produtivo.</p>
+              </section>
+              
+              <section id="section11" class="section" aria-labelledby="section11-title">
                 <h2 id="section11-title">Conclusão</h2>
-                <p>O futuro do setor produtivo global será moldado pela adoção e integração das tecnologias transversais. Países como os Estados Unidos e a China estão claramente à frente, com investimentos maciços em pesquisa e desenvolvimento e na criação de políticas públicas voltadas para a inovação tecnológica.</p>
-            </section>
-
-            <section id="section12" class="section" aria-labelledby="section12-title">
-                <p>Para o Brasil, é crucial adotar uma postura mais proativa e investir em tecnologias emergentes, se quiser garantir sua competitividade no futuro.</p>
-            </section>
-
-            <section id="section13" class="section" aria-labelledby="section13-title">
-                <p>O país deve buscar uma abordagem mais integrada e estratégica, fortalecendo sua infraestrutura científica e tecnológica, criando novas oportunidades para o setor privado e estimulando a formação de mão de obra altamente qualificada.</p>
-            </section>
-
-            <section id="section14" class="section" aria-labelledby="section14-title">
+                <p>O futuro do setor produtivo global será moldado pela integração das tecnologias transversais. Países como Estados Unidos e China estão na vanguarda, investindo massivamente em pesquisa, desenvolvimento e políticas públicas voltadas para a inovação tecnológica.</p>
+              </section>
+              
+              <section id="section12" class="section" aria-labelledby="section12-title">
+                <p>Para garantir sua competitividade futura, o Brasil precisa adotar uma postura proativa, investindo em tecnologias emergentes e fortalecendo sua infraestrutura científica e tecnológica.</p>
+              </section>
+              
+              <section id="section13" class="section" aria-labelledby="section13-title">
+                <p>Uma abordagem integrada e estratégica, que envolva o setor privado, universidades e governo, é fundamental para criar oportunidades e formar mão de obra altamente qualificada.</p>
+              </section>
+              
+              <section id="section14" class="section" aria-labelledby="section14-title">
                 <p>Leia o artigo completo em: 
-                    <a href="https://www.ipea.gov.br/cts/pt/central-de-conteudo/artigos/artigos/353-as-tecnologias-transversais-e-o-futuro-do-setor-produtivo" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       aria-label="Artigo completo sobre tecnologias transversais e o futuro do setor produtivo no IPEA">
-                        Tecnologias Transversais
-                    </a>
+                  <a href="https://www.ipea.gov.br/cts/pt/central-de-conteudo/artigos/artigos/353-as-tecnologias-transversais-e-o-futuro-do-setor-produtivo" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     aria-label="Artigo completo sobre tecnologias transversais e o futuro do setor produtivo no IPEA">
+                      Tecnologias Transversais
+                  </a>
                 </p>
-            </section>
-        </div>
-
-        <!-- Botão de Avançar -->
-        <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção">
-            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </section>              
         </div>
     </div>
 
@@ -133,6 +136,6 @@
     <!-- Scripts personalizados -->
     <script src="../assets/js/components/modo-escuro.js" defer></script>
     <script src="../assets/js/components/navegacao.js" defer></script>
-    <script src="../assets/js/utils/artigos.js" defer></script>
+    <script src="../assets/js/utils/barra-de-progresso.js" defer></script>
 </body>
 </html>

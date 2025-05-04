@@ -49,69 +49,77 @@
 
     <!-- Conteúdo do Artigo -->
     <div class="container-article">
-        <!-- Barra de Progresso -->
-        <div class="progress-container" aria-hidden="true">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
 
+        <div id="progress-app">
+            <!-- Barra de Progresso controlada por Vue -->
+            <div class="progress-container" aria-hidden="true">
+                <div class="progress-bar" :style="{ width: progress + '%' }"></div>
+            </div>
+        
+            <!-- Botão de Avançar controlado por Vue -->
+            <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção" @click="scrollToNextSection">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        
         <!-- Seções do Texto -->
         <div class="sections" role="article">
             <section id="section1" class="section" aria-labelledby="section1-title">
                 <h2 id="section1-title">Introdução</h2>
-                <p>Nas últimas décadas, com o avanço das tecnologias e a popularização das redes sociais, surgiram novos comportamentos que afetam diretamente a saúde mental das pessoas.</p>
+                <p>Com o crescimento das redes sociais, surgiram comportamentos preocupantes como o stalking digital, caracterizado pela investigação excessiva da vida alheia online. Esse fenômeno levanta debates sobre privacidade, saúde mental e ética nas interações digitais.</p>
             </section>
-
+            
             <section id="section2" class="section" aria-labelledby="section2-title">
-                <p>Um desses comportamentos é o stalking digital, que se refere à prática de seguir, monitorar ou investigar a vida de outra pessoa de forma obsessiva e invasiva, por meio das plataformas digitais.</p>
+                <p>O stalking digital vai além da curiosidade ocasional: trata-se de um acompanhamento persistente e obsessivo da rotina e informações de outra pessoa sem consentimento, muitas vezes sem que o alvo perceba imediatamente.</p>
             </section>
-
+            
             <section id="section3" class="section" aria-labelledby="section3-title">
-                <p>Embora o termo “stalkear” tenha uma conotação negativa, muitas vezes é confundido com simples curiosidade, mas seus efeitos psicológicos podem ser profundos e prejudiciais, tanto para quem realiza quanto para quem é alvo desse comportamento.</p>
+                <p>Esse comportamento, embora normalizado em algumas culturas digitais, pode mascarar sentimentos de inveja, insegurança ou controle. Psicologicamente, tanto o stalker quanto o alvo podem ser prejudicados, criando ciclos de ansiedade e dependência emocional.</p>
             </section>
-
+            
             <section id="section4" class="section" aria-labelledby="section4-title">
                 <h2 id="section4-title">Consequências Psicológicas para a Pessoa Alvo do Stalking</h2>
-                <p>Embora a pessoa que pratica o stalking esteja diretamente afetada, quem é alvo desse comportamento também sofre consequências psicológicas.</p>
+                <p>Ser alvo de stalking digital pode gerar uma série de impactos emocionais, desde desconforto leve até medo constante, principalmente quando o comportamento evolui para interações invasivas ou ameaçadoras.</p>
             </section>
-
+            
             <section id="section5" class="section" aria-labelledby="section5-title">
-                <p>Muitas vezes, a pessoa alvo do stalking pode se sentir violada em sua privacidade, o que gera sentimentos de medo, insegurança e ansiedade.</p>
+                <p>A violação da privacidade online provoca sentimentos de vulnerabilidade e desconfiança. Muitas vítimas relatam sensação de exposição, o que pode limitar sua liberdade de expressão nas redes sociais.</p>
             </section>
-
+            
             <section id="section6" class="section" aria-labelledby="section6-title">
-                <p>Isso pode comprometer a confiança em outros indivíduos, dificultando o estabelecimento de novas relações sociais e afetivas.</p>
+                <p>Essa experiência pode levar ao isolamento social, dificuldades de criar novas amizades ou relacionamentos afetivos e um aumento na percepção de perigo mesmo em interações virtuais seguras.</p>
             </section>
-
+            
             <section id="section7" class="section" aria-labelledby="section7-title">
-                <p>O constante monitoramento da vida de uma pessoa por outra pode levar a uma sensação de falta de controle sobre sua própria existência, gerando uma sensação de impotência.</p>
+                <p>A perda de controle sobre a própria imagem pública gera estresse psicológico e prejudica a autoestima, principalmente quando o stalker utiliza as informações para manipular ou intimidar a vítima.</p>
             </section>
-
+            
             <section id="section8" class="section" aria-labelledby="section8-title">
-                <p>Esse tipo de violação da privacidade pode impactar a saúde mental de maneira significativa, levando a distúrbios como transtornos de ansiedade, insônia e, em casos mais graves, até depressão. Em situações extremas, o stalking pode evoluir para um nível de assédio moral, o que pode afetar ainda mais a qualidade de vida da pessoa alvo.</p>
+                <p>Além disso, o estresse crônico pode desencadear transtornos como ansiedade generalizada, ataques de pânico, depressão e insônia. Em casos graves, o stalking digital pode evoluir para perseguição física, aumentando os riscos à segurança pessoal.</p>
             </section>
-
+            
             <section id="section9" class="section" aria-labelledby="section9-title">
                 <h2 id="section9-title">Impacto na Sociedade e nas Relações Pessoais</h2>
-                <p>O stalking digital reflete uma questão maior da sociedade moderna: a busca incessante por validação e conexão, muitas vezes substituindo o contato humano real por interações superficiais nas redes sociais.</p>
+                <p>O stalking reflete uma cultura digital marcada pela vigilância constante e pela comparação social. Essa prática mina a confiança entre indivíduos e reforça padrões tóxicos de interação online.</p>
             </section>
-
+            
             <section id="section10" class="section" aria-labelledby="section10-title">
-                <p>As consequências desse comportamento não são apenas individuais, mas também coletivas, pois ele pode prejudicar a construção de relações saudáveis e autênticas, tanto no ambiente virtual quanto no físico.</p>
+                <p>Além de prejudicar a saúde mental, o stalking contribui para a deterioração das relações interpessoais ao incentivar comportamentos controladores, ciúmes excessivos e dependência emocional.</p>
             </section>
-
+            
             <section id="section11" class="section" aria-labelledby="section11-title">
                 <h2 id="section11-title">Conclusão</h2>
-                <p>O stalking nas redes sociais é um comportamento que pode ter sérias consequências psicológicas para quem o pratica e para quem é alvo.</p>
+                <p>O stalking digital, embora comum, não deve ser trivializado: é um comportamento com sérias implicações psicológicas e sociais. Combater essa prática exige educação digital, autoconsciência e políticas que promovam segurança e respeito no ambiente online.</p>
             </section>
-
+            
             <section id="section12" class="section" aria-labelledby="section12-title">
-                <p>Com a facilidade de acesso à vida das outras pessoas por meio das plataformas digitais, é importante que todos desenvolvam uma consciência crítica sobre o uso dessas redes e sobre como elas impactam a saúde mental.</p>
+                <p>É essencial promover o uso ético das redes sociais e incentivar a reflexão sobre os limites entre curiosidade saudável e invasão de privacidade, garantindo o bem-estar emocional coletivo.</p>
             </section>
-
+            
             <section id="section13" class="section" aria-labelledby="section13-title">
-                <p>Tanto a busca incessante por informações sobre outros quanto a invasão da privacidade de alguém podem gerar distúrbios emocionais significativos. Por isso, é crucial que cada indivíduo aprenda a respeitar os limites e a manter um equilíbrio saudável no consumo e na interação nas redes sociais.</p>
+                <p>Para preservar a saúde mental, indivíduos devem buscar um equilíbrio no uso das redes, evitando a exposição excessiva e respeitando os limites dos outros, além de buscar apoio psicológico quando identificarem comportamentos obsessivos ou prejudiciais.</p>
             </section>
-
+            
             <section id="section14" class="section" aria-labelledby="section14-title">
                 <p>Leia o artigo completo em:
                     <a href="https://br.mundopsicologos.com/artigos/as-consequencias-psicologicas-de-stalkear-nas-redes-sociais" target="_blank" rel="noopener noreferrer" aria-label="Artigo completo sobre as consequências psicológicas de stalkear nas redes sociais no Mundo Psicólogos">
@@ -119,11 +127,6 @@
                     </a>
                 </p>
             </section>
-        </div>
-
-        <!-- Botão de Avançar -->
-        <div id="scroll-down-arrow" aria-label="Avançar para a próxima seção">
-            <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </div>
     </div>
 
@@ -133,6 +136,6 @@
     <!-- Scripts personalizados -->
     <script src="../assets/js/components/modo-escuro.js" defer></script>
     <script src="../assets/js/components/navegacao.js" defer></script>
-    <script src="../assets/js/utils/artigos.js" defer></script>
+    <script src="../assets/js/utils/barra-de-progresso.js" defer></script>
 </body>
 </html>

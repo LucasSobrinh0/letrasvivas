@@ -1,253 +1,254 @@
 /* ==================== VARIÁVEIS ==================== */
 :root {
-    --primary-color: #0072f5;
-    --secondary-color: #ff6f61;
-    --dark-primary-color: #bb86fc;
-    --dark-secondary-color: #cf6679;
-    --dark-bg: #121212;
-    --dark-card-bg: #1e1e1e;
-    --text-light: #e0e0e0;
-    --text-muted: #b0b0b0;
-    --transition-speed: 0.3s;
-  }
-  
-  /* ==================== BOTÃO DARK MODE ==================== */
-  #dark-mode-toggle {
-    background: transparent;
-    color: var(--primary-color);
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-    transition: all var(--transition-speed);
-  }
-  
-  #dark-mode-toggle i {
-    font-size: 1.2rem;
-    transition: transform var(--transition-speed);
-  }
-  
-  #dark-mode-toggle:hover,
-  #dark-mode-toggle.active {
-    color: var(--secondary-color);
-  }
-  
-  #dark-mode-toggle.active i {
-    transform: scale(1.2);
-  }
-  
-  /* ==================== MODO ESCURO GLOBAL ==================== */
-  .dark-mode {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-  }
-  
-  .dark-mode body {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-  }
-  
-  .dark-mode nav {
-    background-color: var(--dark-card-bg);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .dark-mode .navbar-toggler i {
-    color: var(--text-light);
-    border-color: var(--text-light);
-  }
-  
-  .dark-mode .nav-item a {
-    color: var(--text-light);
-  }
-  
-  .dark-mode .nav-item a:hover {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode nav .logo {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode nav .logo span {
-    color: var(--secondary-color);
-  }
-  
-  .dark-mode footer {
-    background-color: var(--dark-bg);
-  }
-  
-  .dark-mode .footer-links a:hover,
-  .dark-mode .social-icons a:hover {
-    color: var(--dark-primary-color);
-  }
-  
-  /* ==================== HEADER E SEÇÕES ==================== */
-  .dark-mode header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  }
-  
-  .dark-mode #sobre,
-  .dark-mode #depoimentos,
-  .dark-mode #contato,
-  .dark-mode #recursos {
-    background-color: var(--dark-bg);
-  }
-  
-  .dark-mode #sobre h2,
-  .dark-mode #depoimentos h2,
-  .dark-mode #recursos h2,
-  .dark-mode #contato h2 {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode #sobre h2 span,
-  .dark-mode #depoimentos h2 span,
-  .dark-mode #recursos h2 span,
-  .dark-mode #contato h2 span {
-    color: var(--secondary-color);
-  }
-  
-  .dark-mode .recurso-item {
-    background-color: var(--dark-card-bg);
-  }
-  
-  .dark-mode .depoimento-item {
-    background-color: var(--dark-card-bg);
-    color: var(--text-light);
-  }
-  
-  .dark-mode .contato-item a {
-    color: var(--text-light);
-  }
-  
-  .dark-mode .contato-item a:hover {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode .link {
-    color: var(--text-light);
-  }
-  
-  .dark-mode .link:hover {
-    color: var(--dark-primary-color);
-  }
-  
-  /* ==================== BOTÕES DARK MODE ==================== */
-  .dark-mode .btn-primary {
-    background-color: var(--secondary-color);
-  }
-  
-  .dark-mode .btn-primary:hover {
-    background-color: #b04f63; /* criar var(--dark-secondary-hover) se quiser */
-  }
-  
-  .dark-mode .btn-secondary {
-    background-color: var(--primary-color);
-  }
-  
-  .dark-mode .btn-secondary:hover {
-    background-color: #005bb5; /* criar var(--primary-hover) se quiser */
-  }
-  
-  /* ==================== ARTIGOS ==================== */
-  .dark-mode #artigos {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-  }
-  
-  .dark-mode #artigos h2 {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode #artigos h2 span {
-    color: var(--dark-secondary-color);
-  }
-  
-  .dark-mode .artigo-item {
-    background-color: var(--dark-card-bg);
-    color: var(--text-light);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .dark-mode .artigo-item h3 {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode .artigo-item p {
-    color: var(--text-muted);
-  }
-  
-  .dark-mode .artigo-item .btn-primary {
-    background-color: var(--dark-secondary-color);
-    color: var(--text-light);
-  }
-  
-  .dark-mode .artigo-item .btn-primary:hover {
-    background-color: #b04f63; 
-  }
-  
-  .dark-mode .interactions {
-    border-top: 1px solid var(--dark-card-bg);
-  }
-  
-  .dark-mode .btn-like,
-  .dark-mode .btn-save {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode .btn-like:hover,
-  .dark-mode .btn-save:hover {
-    color: var(--dark-secondary-color);
-  }
-  
-  .dark-mode .btn-like.liked,
-  .dark-mode .btn-save.saved {
-    color: var(--dark-secondary-color);
-  }
-  
-  /* ==================== PÁGINA DO ARTIGO ==================== */
-  .dark-mode .container-article {
-    border-bottom: 1px solid var(--dark-card-bg);
-  }
-  
-  .dark-mode .progress-container {
-    background: var(--dark-card-bg);
-  }
-  
-  .dark-mode .progress-bar {
-    background: linear-gradient(to right, var(--dark-primary-color), var(--dark-secondary-color));
-  }
-  
-  .dark-mode .section {
-    border-bottom: 1px solid var(--dark-card-bg);
-  }
-  
-  .dark-mode .section h2 {
-    color: var(--dark-primary-color);
-  }
-  
-  .dark-mode .section p {
-    color: var(--text-muted);
-  }
-  
-  .dark-mode .section a {
-    color: var(--dark-secondary-color);
-  }
-  
-  .dark-mode .section a:hover {
-    text-decoration: underline;
-    color: #ff6f61; 
-  }
-  
-  .dark-mode #scroll-down-arrow {
-    background: var(--dark-primary-color);
-  }
-  
-  .dark-mode #scroll-down-arrow:hover {
-    background: #9a67db; 
-  }
-  
+  --primary-color: #0072f5;
+  --secondary-color: #ff6f61;
+  --dark-primary-color: #bb86fc;
+  --dark-secondary-color: #cf6679;
+  --dark-bg: #121212;
+  --dark-card-bg: #1e1e1e;
+  --text-light: #e0e0e0;
+  --text-muted: #b0b0b0;
+  --transition-speed: 0.3s;
+}
+
+/* ==================== BOTÃO DARK MODE ==================== */
+#dark-mode-toggle {
+  background: transparent;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  transition: all var(--transition-speed);
+}
+
+#dark-mode-toggle i {
+  font-size: 1.2rem;
+  transition: transform var(--transition-speed);
+}
+
+#dark-mode-toggle:hover,
+#dark-mode-toggle.active {
+  color: var(--secondary-color);
+}
+
+#dark-mode-toggle.active i {
+  transform: scale(1.2);
+}
+
+/* ==================== MODO ESCURO GLOBAL ==================== */
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+}
+
+.dark-mode body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+}
+
+.dark-mode nav {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .navbar-toggler i {
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.dark-mode .nav-item a {
+  color: var(--text-light);
+}
+
+.dark-mode .nav-item a:hover {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode nav .logo {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode nav .logo span {
+  color: var(--secondary-color);
+}
+
+.dark-mode footer {
+  background-color: var(--dark-bg);
+}
+
+.dark-mode .footer-links a:hover,
+.dark-mode .social-icons a:hover {
+  color: var(--dark-primary-color);
+}
+
+/* ==================== HEADER E SEÇÕES ==================== */
+.dark-mode header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.dark-mode #sobre,
+.dark-mode #depoimentos,
+.dark-mode #contato,
+.dark-mode #recursos {
+  background-color: var(--dark-bg);
+}
+
+.dark-mode #sobre h2,
+.dark-mode #depoimentos h2,
+.dark-mode #recursos h2,
+.dark-mode #contato h2 {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode #sobre h2 span,
+.dark-mode #depoimentos h2 span,
+.dark-mode #recursos h2 span,
+.dark-mode #contato h2 span {
+  color: var(--secondary-color);
+}
+
+.dark-mode .recurso-item {
+  background-color: var(--dark-card-bg);
+}
+
+.dark-mode .depoimento-item {
+  background-color: var(--dark-card-bg);
+  color: var(--text-light);
+}
+.dark-mode .autor-nome {
+  color: var(--dark-primary-color);
+}
+.dark-mode .contato-item a {
+  color: var(--text-light);
+}
+
+.dark-mode .contato-item a:hover {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode .link {
+  color: var(--text-light);
+}
+
+.dark-mode .link:hover {
+  color: var(--dark-primary-color);
+}
+
+/* ==================== BOTÕES DARK MODE ==================== */
+.dark-mode .btn-primary {
+  background-color: var(--secondary-color);
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #b04f63; /* criar var(--dark-secondary-hover) se quiser */
+}
+
+.dark-mode .btn-secondary {
+  background-color: var(--primary-color);
+}
+
+.dark-mode .btn-secondary:hover {
+  background-color: #005bb5; /* criar var(--primary-hover) se quiser */
+}
+
+/* ==================== ARTIGOS ==================== */
+.dark-mode #artigos {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+}
+
+.dark-mode #artigos h2 {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode #artigos h2 span {
+  color: var(--dark-secondary-color);
+}
+
+.dark-mode .artigo-item {
+  background-color: var(--dark-card-bg);
+  color: var(--text-light);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .artigo-item h3 {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode .artigo-item p {
+  color: var(--text-muted);
+}
+
+.dark-mode .artigo-item .btn-primary {
+  background-color: var(--dark-secondary-color);
+  color: var(--text-light);
+}
+
+.dark-mode .artigo-item .btn-primary:hover {
+  background-color: #b04f63;
+}
+
+.dark-mode .interactions {
+  border-top: 1px solid var(--dark-card-bg);
+}
+
+.dark-mode .btn-like,
+.dark-mode .btn-save {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode .btn-like:hover,
+.dark-mode .btn-save:hover {
+  color: var(--dark-secondary-color);
+}
+
+.dark-mode .btn-like.liked,
+.dark-mode .btn-save.saved {
+  color: var(--dark-secondary-color);
+}
+
+/* ==================== PÁGINA DO ARTIGO ==================== */
+.dark-mode .container-article {
+  border-bottom: 1px solid var(--dark-card-bg);
+}
+
+.dark-mode .progress-container {
+  background: var(--dark-card-bg);
+}
+
+.dark-mode .progress-bar {
+  background: linear-gradient(to right, var(--dark-primary-color), var(--dark-secondary-color));
+}
+
+.dark-mode .section {
+  border-bottom: 1px solid var(--dark-card-bg);
+}
+
+.dark-mode .section h2 {
+  color: var(--dark-primary-color);
+}
+
+.dark-mode .section p {
+  color: var(--text-muted);
+}
+
+.dark-mode .section a {
+  color: var(--dark-secondary-color);
+}
+
+.dark-mode .section a:hover {
+  text-decoration: underline;
+  color: #ff6f61;
+}
+
+.dark-mode #scroll-down-arrow {
+  background: var(--dark-primary-color);
+}
+
+.dark-mode #scroll-down-arrow:hover {
+  background: #9a67db;
+}
