@@ -6,7 +6,7 @@ Uma plataforma web inovadora que auxilia jovens a manter a concentração na lei
 
 ## 📐 Layout
 
-<img src="../letrasvivas/assets/img/Layout.gif" alt="Demonstração do layout do LetrasVivas">
+<img src="./assets/img/Layout.gif" alt="Demonstração do layout do LetrasVivas">
 
 ---
 
